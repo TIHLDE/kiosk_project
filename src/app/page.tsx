@@ -15,6 +15,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
+
     <div className="bg-blue-1000 text-white min-h-screen flex flex-col">
       
       <main className="flex flex-col gap-8 ">
@@ -84,5 +85,6 @@ export default function Home() {
         </footer>
       </main>
     </div>
+
   );
 }
