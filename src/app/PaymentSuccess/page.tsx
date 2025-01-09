@@ -3,8 +3,8 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "Betaling vellykket",
-    description: "Betaling vellykket",
+    title: "Payment Successful",
+    description: "",
     icons: {
       icon: "/drift-logo.png",
     },

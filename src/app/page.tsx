@@ -88,6 +88,30 @@ export default function Home() {
       <td className="border border-white">Powerking</td>
       <td className="border border-white">12:29:09</td>
     </tr>
+    <tr>
+      <td className="border border-white">Powerking</td>
+      <td className="border border-white">12:29:09</td>
+    </tr>
+    <tr>
+      <td className="border border-white">Powerking</td>
+      <td className="border border-white">12:29:09</td>
+    </tr>
+    <tr>
+      <td className="border border-white">Powerking</td>
+      <td className="border border-white">12:29:09</td>
+    </tr>
+    <tr>
+      <td className="border border-white">Powerking</td>
+      <td className="border border-white">12:29:09</td>
+    </tr>
+    <tr>
+      <td className="border border-white">Powerking</td>
+      <td className="border border-white">12:29:09</td>
+    </tr>
+    <tr>
+      <td className="border border-white">Powerking</td>
+      <td className="border border-white">12:29:09</td>
+    </tr>
           </tbody>
         
         </table>
