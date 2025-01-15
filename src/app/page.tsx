@@ -62,59 +62,57 @@ export default function Home() {
     <div className="bg-blue-1000 text-white min-h-screen flex flex-col text-center">
       
       <main className="flex flex-col gap-8 ">
-        <h1 className="text-10xl">TAFS</h1>
-        <h1 className="text-3xl">Nyeste kjøp</h1>
-        <table className="border border-white border-collapse w-full">
-        <thead>
-            <tr>
-            <th className="border border-white">Vare</th>
-      <th className="border border-white">Klokkeslett</th>
+        <h1 className="text-10x1">Nyeste kjøp på TAFS</h1>
+        <table className="border border-white border-collapse w-full bg-gradient-to-t from-blue-800 to-blue-950">
+  <thead>
+    <tr>
+      <th className="border border-white text-center p-4">Vare</th>
+      <th className="border border-white text-center p-4">Klokkeslett</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td className="border border-white">Powerking</td> {/* products[siste element]  */}
-      <td className="border border-white">12:40:51</td> { /* dates[siste element] */}
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:40:51</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td> {/* products[siste element]  */}
-      <td className="border border-white">12:39:52</td> { /* dates[siste element] */}
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:39:52</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:38:53</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:38:53</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:29:09</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:29:09</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:29:09</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:29:09</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:29:09</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:29:09</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:29:09</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:29:09</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:29:09</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:29:09</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:29:09</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:29:09</td>
     </tr>
     <tr>
-      <td className="border border-white">Powerking</td>
-      <td className="border border-white">12:29:09</td>
+      <td className="border border-white text-center p-4">Powerking</td>
+      <td className="border border-white text-center p-4">12:29:09</td>
     </tr>
-          </tbody>
-        
-        </table>
+  </tbody>
+</table>
 
         <footer className="absolute bg-blue-1100 bottom-0 p-8 w-full h-60 flex flex-col items-center justify-center">
           <Image
