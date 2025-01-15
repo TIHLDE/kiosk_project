@@ -1,0 +1,66 @@
+import Jwt from "jsonwebtoken";
+import { cookies } from "next/headers";
+
+const ZETTLE_CLIENT_SECRET = process.env["ZETTLE_CLIENT_SECRET"];
+const ZETTLE_CLIENT_ID = process.env["ZETTLE_CLIENT_ID"];
+
+interface AuthResponse {
+  access_token: string;
+  expires_in: number;
+}
+
+function isAccessTokenValid(token: string) {
+  try {
+    // Decode the token without verifying the signature
+    const decoded = Jwt.decode(token) as { exp?: number };
+
+    if (!decoded || typeof decoded.exp !== "number") {
+      return false;
+    }
+
+    // Check if the current time + 5 min is before the expiration time
+    const gracePeriod = 300; // seconds
+    const currentTime = Math.floor(Date.now() / 1000);
+    return currentTime + gracePeriod < decoded.exp;
+  } catch (error) {
+    console.error(error);
+    return false;
+  }
+}
+
+export const getAccessToken = async (): Promise<string | null> => {
+  const cookieStorage = await cookies();
+
+  const existingAccessToken = cookieStorage.get("zettle_access_token");
+
+  if (existingAccessToken && isAccessTokenValid(existingAccessToken.value)) {
+    return existingAccessToken.value;
+  }
+
+  if (!ZETTLE_CLIENT_SECRET || !ZETTLE_CLIENT_ID) {
+    throw Error("Missing Zettle API key or client ID");
+  }
+
+  const response = await fetch("https://oauth.zettle.com/token", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams({
+      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      client_id: ZETTLE_CLIENT_ID!,
+      assertion: ZETTLE_CLIENT_SECRET!,
+    }),
+  });
+
+  if (response.status !== 200) {
+    throw response;
+  }
+
+  const data = (await response.json()) as AuthResponse;
+  const accessToken = data.access_token;
+
+  cookieStorage.set("zettle_access_token", accessToken);
+
+  return accessToken;
+};
