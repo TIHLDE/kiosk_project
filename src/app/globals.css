@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: white;
   --foreground: #171717;
 }
 
@@ -15,7 +15,7 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: black;
+  background: linear-gradient(to bottom left, #94dcc1, #56ab2f);
   font-family: Arial, Helvetica, sans-serif;
 }
