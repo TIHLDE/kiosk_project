@@ -1,22 +1,28 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-interface ZettleData {
-  averagePayment: number;
-}
+import { PurchaseStatistics } from "./api/zettle/zettle_data";
 
 export default function Home() {
-  const [data, setState] = useState<ZettleData | undefined>(undefined);
+  const [data, setData] = useState<PurchaseStatistics | undefined>(undefined);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("/api/zettle");
-      const data = await response.json();
-      setState(data);
+      console.log("Fetching data");
+      try {
+        const response = await fetch("/api/zettle");
+        const newData = await response.json();
+        setData(newData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     fetchData();
+
+    const intervalId = setInterval(fetchData, 10000);
+
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -30,6 +36,54 @@ export default function Home() {
         </div>
       ) : (
         <div className="text-4xl pt-10">
+          <p>Loading...</p>
+        </div>
+      )}
+      <h1 className="text-2xl font-bold pt-10">
+        Mest solgte produkter siste 1000 betalinger
+      </h1>
+      {data ? (
+        <div>
+          <ul>
+            {data.mostSoldProductsByItems.slice(0, 10).map((product) => (
+              <li key={product.name}>
+                {product.name}: {product.quantity}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div>
+          <p>Loading...</p>
+        </div>
+      )}
+      <h1 className="text-2xl font-bold pt-10">
+        Mest inntektsgivende produkter siste 1000 betalinger
+      </h1>
+      {data ? (
+        <div>
+          <ul>
+            {data.mostSoldProductsByRevenue.slice(0, 10).map((product) => (
+              <li key={product.name}>
+                {product.name}: {product.amount},-
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <div>
+          <p>Loading...</p>
+        </div>
+      )}
+      <h1 className="text-2xl font-bold pt-10">
+        Antall energidrikker solgt siste 1000 betalinger
+      </h1>
+      {data ? (
+        <div>
+          <p>{data.numberOfEnergyDrinksSold}</p>
+        </div>
+      ) : (
+        <div>
           <p>Loading...</p>
         </div>
       )}

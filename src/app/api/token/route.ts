@@ -28,7 +28,7 @@ function isAccessTokenValid(token: string) {
   }
 }
 
-export const getAccessToken = async (): Promise<string | null> => {
+export const getAccessToken = async (): Promise<string> => {
   const cookieStorage = await cookies();
 
   const existingAccessToken = cookieStorage.get("zettle_access_token");
@@ -54,7 +54,8 @@ export const getAccessToken = async (): Promise<string | null> => {
   });
 
   if (response.status !== 200) {
-    throw response;
+    console.error(response);
+    throw Error("Failed to get a new access token");
   }
 
   const data = (await response.json()) as AuthResponse;

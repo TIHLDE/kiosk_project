@@ -2,14 +2,30 @@
 
 import { NextResponse } from "next/server";
 import { getAccessToken } from "@/app/api/token/route";
+import {
+  getAveragePayment,
+  mostBoughtProducts as mostBoughtProductsByItems,
+  mostBoughtProductsByRevenue,
+  numberOfEnergyDrinksBougt,
+  PurchaseData,
+  PurchaseStatistics,
+} from "./zettle_data";
 
 export async function GET() {
   // Get the access token
   const accessToken = await getAccessToken();
 
+  if (!accessToken) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  if (!accessToken) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   // Set query parameters
   const queryParams = new URLSearchParams({
-    limit: "1000",
+    descending: "true",
   }).toString();
 
   // Fetch the data
@@ -24,38 +40,17 @@ export async function GET() {
 
   // Check if the request was successful
   if (response.status !== 200) {
-    return NextResponse.json(
-      { message: "Could not fetch data" },
-      { status: 500 }
-    );
+    console.error("Failed to fetch data");
+    throw new Error("Failed to fetch data");
   }
 
   // Parse the response
-  const data = await response.json();
+  const data = (await response.json()) as PurchaseData;
 
-  // Calculate the average payment
-  const averagePayment = getAveragePayment(data.purchases);
-
-  // Return the average payment
-  return NextResponse.json({ averagePayment }, { status: 200 });
-}
-
-function getAveragePayment(purchases: { amount: number }[]): number {
-  if (!purchases || purchases.length === 0) {
-    return 0;
-  }
-
-  // Sum all the payments
-  const totalAmount =
-    purchases.reduce((sum, purchase) => {
-      // Assuming each purchase has only one payment
-      const paymentAmount = purchase.amount;
-      return sum + paymentAmount;
-    }, 0) / 100;
-
-  // Calculate the average payment
-  const averageAmount = totalAmount / purchases.length;
-
-  // Round to 2 decimal places
-  return Math.round(averageAmount * 100) / 100;
+  return NextResponse.json({
+    averagePayment: getAveragePayment(data.purchases),
+    mostSoldProductsByItems: mostBoughtProductsByItems(data.purchases),
+    mostSoldProductsByRevenue: mostBoughtProductsByRevenue(data.purchases),
+    numberOfEnergyDrinksSold: numberOfEnergyDrinksBougt(data.purchases),
+  } as PurchaseStatistics);
 }
