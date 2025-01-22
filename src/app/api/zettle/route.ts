@@ -19,10 +19,6 @@ export async function GET() {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!accessToken) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
   // Set query parameters
   const queryParams = new URLSearchParams({
     descending: "true",
