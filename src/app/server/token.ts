@@ -48,6 +48,7 @@ export const getAccessToken = async (): Promise<string> => {
       client_id: ZETTLE_CLIENT_ID!,
       assertion: ZETTLE_CLIENT_SECRET!,
     }),
+    cache: "no-store",
   });
 
   if (response.status !== 200) {

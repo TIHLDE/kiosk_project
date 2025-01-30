@@ -71,6 +71,7 @@ export async function fetchPurchases(
       headers: {
         Authorization: `Bearer ${accessToken}`,
       },
+      cache: "no-store",
     }
   );
 
