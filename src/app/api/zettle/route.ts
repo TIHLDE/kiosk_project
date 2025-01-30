@@ -56,7 +56,7 @@ export async function GET() {
   } as PurchaseStatistics);
 }
 
-async function fetchPurchases(
+export async function fetchPurchases(
   startDate: Date,
   endDate: Date,
   accessToken: string
