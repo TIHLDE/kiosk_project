@@ -28,7 +28,9 @@ export default function Home() {
   return (
     <div className="bg-black w-full h-screen text-white flex flex-col items-center justify-center">
       <h1 className="text-2xl font-bold">
-        Gjennomsnittlig betalingsbeløp siste 1000 betalinger
+        Gjennomsnittlig betalingsbeløp siste {data?.numberOfPurchases}{" "}
+        betalinger ({formatDate(data?.startDate || new Date())} -{" "}
+        {formatDate(data?.endDate || new Date())})
       </h1>
       {data ? (
         <div>
@@ -40,7 +42,7 @@ export default function Home() {
         </div>
       )}
       <h1 className="text-2xl font-bold pt-10">
-        Mest solgte produkter siste 1000 betalinger
+        Mest solgte produkter siste {data?.numberOfPurchases} betalinger
       </h1>
       {data ? (
         <div>
@@ -58,7 +60,8 @@ export default function Home() {
         </div>
       )}
       <h1 className="text-2xl font-bold pt-10">
-        Mest inntektsgivende produkter siste 1000 betalinger
+        Mest inntektsgivende produkter siste {data?.numberOfPurchases}{" "}
+        betalinger
       </h1>
       {data ? (
         <div>
@@ -76,7 +79,7 @@ export default function Home() {
         </div>
       )}
       <h1 className="text-2xl font-bold pt-10">
-        Antall energidrikker solgt siste 1000 betalinger
+        Antall energidrikker solgt siste {data?.numberOfPurchases} betalinger
       </h1>
       {data ? (
         <div>
@@ -89,4 +92,11 @@ export default function Home() {
       )}
     </div>
   );
+}
+
+function formatDate(date: Date): string {
+  const dateObject = new Date(date);
+  return `${dateObject.getDate().toString()}.${(
+    dateObject.getMonth() + 1
+  ).toString()}.${dateObject.getFullYear().toString()}`;
 }

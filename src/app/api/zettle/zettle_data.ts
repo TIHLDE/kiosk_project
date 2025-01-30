@@ -1,4 +1,4 @@
-interface Purchase {
+export interface Purchase {
   amount: number;
   purchaseUUID: string;
   vatAmount: number;
@@ -50,6 +50,9 @@ interface ProductRevenue {
 }
 
 export interface PurchaseStatistics {
+  startDate: Date;
+  endDate: Date;
+  numberOfPurchases: number;
   averagePayment: number;
   mostSoldProductsByItems: ProductCount[];
   mostSoldProductsByRevenue: ProductRevenue[];
