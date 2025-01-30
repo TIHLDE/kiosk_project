@@ -8,7 +8,6 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log("Fetching data");
       try {
         const response = await fetch("/api/zettle");
         const newData = await response.json();
