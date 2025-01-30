@@ -6,8 +6,8 @@ import {
   mostBoughtProductsByRevenue,
   numberOfEnergyDrinksBougt,
 } from "../api/zettle/zettle_data";
-import { fetchPurchases } from "@/app/api/zettle/route";
 import { getAccessToken } from "../utils/token";
+import { fetchPurchases } from "../utils/zettle";
 
 export async function getPurchaseStats() {
   const accessToken = await getAccessToken();
