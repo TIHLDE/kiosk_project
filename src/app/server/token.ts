@@ -1,10 +1,10 @@
 "use server";
 
 import Jwt from "jsonwebtoken";
-import { cookies } from "next/headers";
 
 const ZETTLE_CLIENT_SECRET = process.env["ZETTLE_CLIENT_SECRET"];
 const ZETTLE_CLIENT_ID = process.env["ZETTLE_CLIENT_ID"];
+let AccessToken = "";
 
 interface AuthResponse {
   access_token: string;
@@ -30,12 +30,8 @@ function isAccessTokenValid(token: string) {
 }
 
 export const getAccessToken = async (): Promise<string> => {
-  const cookieStorage = await cookies();
-
-  const existingAccessToken = cookieStorage.get("zettle_access_token");
-
-  if (existingAccessToken && isAccessTokenValid(existingAccessToken.value)) {
-    return existingAccessToken.value;
+  if (AccessToken && isAccessTokenValid(AccessToken)) {
+    return AccessToken;
   }
 
   if (!ZETTLE_CLIENT_SECRET || !ZETTLE_CLIENT_ID) {
@@ -61,7 +57,7 @@ export const getAccessToken = async (): Promise<string> => {
   const data = (await response.json()) as AuthResponse;
   const accessToken = data.access_token;
 
-  cookieStorage.set("zettle_access_token", accessToken);
+  AccessToken = accessToken;
 
   return accessToken;
 };

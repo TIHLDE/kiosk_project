@@ -9,8 +9,8 @@ import {
   Purchase,
   PurchaseStatistics,
 } from "./zettle_data";
-import { getAccessToken } from "@/app/utils/token";
-import { fetchPurchases } from "@/app/utils/zettle";
+import { getAccessToken } from "@/app/server/token";
+import { fetchPurchases } from "@/app/server/zettle";
 
 export async function GET() {
   // Get the access token
