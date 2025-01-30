@@ -1,7 +1,6 @@
 "use server";
 
 import { NextResponse } from "next/server";
-import { getAccessToken } from "@/app/api/token/route";
 import {
   getAveragePayment,
   mostBoughtProducts as mostBoughtProductsByItems,
@@ -11,6 +10,7 @@ import {
   PurchaseData,
   PurchaseStatistics,
 } from "./zettle_data";
+import { getAccessToken } from "@/app/utils/token";
 
 export async function GET() {
   // Get the access token
@@ -61,7 +61,6 @@ async function fetchPurchases(
   endDate: Date,
   accessToken: string
 ): Promise<Purchase[]> {
-  console.log(startDate, "-->", endDate);
 
   // Set query parameters
   const queryParams = new URLSearchParams({

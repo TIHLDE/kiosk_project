@@ -6,17 +6,17 @@ import { PurchaseStatistics } from "./api/zettle/zettle_data";
 export default function Home() {
     const [data, setData] = useState<PurchaseStatistics | undefined>(undefined);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            console.log("Fetching data");
-            try {
-                const response = await fetch("/api/zettle");
-                const newData = await response.json();
-                setData(newData);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/zettle");
+        const newData = await response.json();
+        setData(newData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
         fetchData();
 

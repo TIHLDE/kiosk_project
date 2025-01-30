@@ -22,8 +22,7 @@ function isAccessTokenValid(token: string) {
     const gracePeriod = 300; // seconds
     const currentTime = Math.floor(Date.now() / 1000);
     return currentTime + gracePeriod < decoded.exp;
-  } catch (error) {
-    console.error(error);
+  } catch {
     return false;
   }
 }
@@ -54,7 +53,6 @@ export const getAccessToken = async (): Promise<string> => {
   });
 
   if (response.status !== 200) {
-    console.error(response);
     throw Error("Failed to get a new access token");
   }
 
