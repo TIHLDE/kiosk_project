@@ -1,3 +1,5 @@
+"use server";
+
 import Jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
 
