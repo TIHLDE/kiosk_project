@@ -5,11 +5,10 @@ import {
   PurchaseData,
   getAveragePayment,
   mostBoughtProducts,
-  mostBoughtProductsByRevenue,
-  numberOfEnergyDrinksBougt,
+  numberOfEnergyDrinksBougt as numberOfEnergyDrinksBought,
+  // numberOfEnergyDrinksBougt,
 } from "../api/zettle/zettle_data";
 import { getAccessToken } from "./token";
-
 
 export async function getPurchaseStats() {
   const accessToken = await getAccessToken();
@@ -47,8 +46,8 @@ export async function getPurchaseStats() {
     numberOfPurchases: purchaseData.length,
     averagePayment: getAveragePayment(purchaseData),
     mostSoldProductsByItems: mostBoughtProducts(purchaseData),
-    mostSoldProductsByRevenue: mostBoughtProductsByRevenue(purchaseData),
-    numberOfEnergyDrinksSold: numberOfEnergyDrinksBougt(purchaseData),
+    // mostSoldProductsByRevenue: mostBoughtProductsByRevenue(purchaseData),
+    numberOfEnergyDrinksSold: numberOfEnergyDrinksBought(purchaseData),
   };
 }
 
@@ -57,7 +56,6 @@ export async function fetchPurchases(
   endDate: Date,
   accessToken: string
 ): Promise<Purchase[]> {
-
   // Set query parameters
   const queryParams = new URLSearchParams({
     descending: "true",

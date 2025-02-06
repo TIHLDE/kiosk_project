@@ -1,5 +1,6 @@
 import ReloadComponent from "./reload-component";
 import { getPurchaseStats } from "./server/zettle";
+import Image from "next/image";
 
 export default async function Home() {
   const data = await getPurchaseStats();
@@ -60,31 +61,12 @@ export default async function Home() {
           )}
         </div>
         <div className="bg-gray-100 flex-box p-12 text-black flex flex-col items-center justify-center rounded-xl space-y-4">
-          <h1 className="text-2xl font-bold">
-            Mest inntektsgivende produkter siste {data?.numberOfPurchases}{" "}
-            betalinger
-          </h1>
-          {data ? (
-            <div className="grid grid-cols-3 gap-3">
-              {data.mostSoldProductsByRevenue
-                .slice(0, 9)
-                .map((product, index) => (
-                  <div
-                    className="space-y-1 border-2 border-sky-700 rounded-lg p-2"
-                    key={index}
-                  >
-                    <p className="text-center font-semibold text-xl">
-                      {product.amount},-
-                    </p>
-                    <p className="text-center">{product.name.slice(0, 20)}</p>
-                  </div>
-                ))}
-            </div>
-          ) : (
-            <div>
-              <p>Loading...</p>
-            </div>
-          )}
+          <Image
+            src="/drift-logo.png"
+            alt="Zettle logo"
+            width={500}
+            height={500}
+          />
         </div>
         <div className="bg-gray-100 flex-box p-12 min-w-60 min-h-30 text-black flex flex-col items-center justify-center rounded-xl">
           {data ? (
