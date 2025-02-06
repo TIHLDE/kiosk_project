@@ -48,7 +48,7 @@ export const getAccessToken = async (): Promise<string> => {
   });
 
   if (response.status !== 200) {
-    console.debug(response);
+    console.error(response);
     throw Error("Failed to get a new access token");
   }
 
