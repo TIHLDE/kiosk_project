@@ -10,7 +10,7 @@ RUN npm install -g pnpm
 
 RUN pnpm i --frozen-lockfile
 
-ENV SKIP_ENV_VALIDATION=1
+ARG SKIP_ENV_VALIDATION=1
 
 RUN pnpm build
 

@@ -34,10 +34,6 @@ export const getAccessToken = async (): Promise<string> => {
     return AccessToken;
   }
 
-  if (!ZETTLE_CLIENT_SECRET || !ZETTLE_CLIENT_ID) {
-    throw Error("Missing Zettle API key or client ID");
-  }
-
   const response = await fetch("https://oauth.zettle.com/token", {
     method: "POST",
     headers: {
