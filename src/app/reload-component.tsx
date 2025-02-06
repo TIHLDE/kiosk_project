@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export default function ReloadComponent() {
   const router = useRouter();
@@ -9,7 +9,7 @@ export default function ReloadComponent() {
   useEffect(() => {
     // Regular refresh interval
     const interval = setInterval(() => {
-      router.refresh();
+      window.location.reload();
       console.log("Refreshing route...");
     }, 1000 * 10);
 
@@ -20,17 +20,20 @@ export default function ReloadComponent() {
       }
     };
 
-    window.addEventListener('offline', handleConnectionError);
-    
-    window.addEventListener('error', (event) => {
-      if (event.message.includes('fetch') || event.message.includes('network')) {
+    window.addEventListener("offline", handleConnectionError);
+
+    window.addEventListener("error", (event) => {
+      if (
+        event.message.includes("fetch") ||
+        event.message.includes("network")
+      ) {
         window.location.reload();
       }
     });
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener('offline', handleConnectionError);
+      window.removeEventListener("offline", handleConnectionError);
     };
   }, [router]);
 

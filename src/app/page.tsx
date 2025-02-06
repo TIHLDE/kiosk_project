@@ -39,17 +39,19 @@ export default async function Home() {
           </h1>
           {data ? (
             <div className="grid grid-cols-3 gap-3">
-              {data.mostSoldProductsByItems.slice(0, 9).map((product, index) => (
-                <div
-                  className="space-y-1 border-2 border-sky-700 rounded-lg p-2"
-                  key={index}
-                >
-                  <p className="text-center font-semibold text-xl">
-                    {product.quantity}
-                  </p>
-                  <p className="text-center">{product.name.slice(0, 20)}</p>
-                </div>
-              ))}
+              {data.mostSoldProductsByItems
+                .slice(0, 9)
+                .map((product, index) => (
+                  <div
+                    className="space-y-1 border-2 border-sky-700 rounded-lg p-2"
+                    key={index}
+                  >
+                    <p className="text-center font-semibold text-xl">
+                      {product.quantity}
+                    </p>
+                    <p className="text-center">{product.name.slice(0, 20)}</p>
+                  </div>
+                ))}
             </div>
           ) : (
             <div>
@@ -98,7 +100,8 @@ export default async function Home() {
             </div>
           )}
           <h1 className="text-2xl font-bold pt-10">
-            Antall energidrikker solgt siste {data?.numberOfPurchases} betalinger
+            Antall energidrikker solgt siste {data?.numberOfPurchases}{" "}
+            betalinger
           </h1>
         </div>
       </div>
