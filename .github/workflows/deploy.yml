@@ -25,9 +25,9 @@ jobs:
 
       - name: Create .env file
         run: |
-          echo 'ZETTLE_CLIENT_SECRET="${{ secrets.ZETTLE_CLIENT_SECRET }}"' >> .env
-          echo 'ZETTLE_CLIENT_ID="${{ secrets.ZETTLE_CLIENT_ID }}"' >> .env
-        
+          echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > .env
+          echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> .env
+
       - name: Copy .env to OpenStack server
         run: |
           scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.PATH }}
