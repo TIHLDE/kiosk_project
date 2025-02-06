@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import {
   getAveragePayment,
   mostBoughtProducts as mostBoughtProductsByItems,
-  mostBoughtProductsByRevenue,
+  // mostBoughtProductsByRevenue,
   numberOfEnergyDrinksBougt,
   Purchase,
   PurchaseStatistics,
@@ -51,7 +51,7 @@ export async function GET() {
     numberOfPurchases: purchaseData.length,
     averagePayment: getAveragePayment(purchaseData),
     mostSoldProductsByItems: mostBoughtProductsByItems(purchaseData),
-    mostSoldProductsByRevenue: mostBoughtProductsByRevenue(purchaseData),
+    // mostSoldProductsByRevenue: mostBoughtProductsByRevenue(purchaseData),
     numberOfEnergyDrinksSold: numberOfEnergyDrinksBougt(purchaseData),
   } as PurchaseStatistics);
 }

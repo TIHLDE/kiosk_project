@@ -44,10 +44,10 @@ interface ProductCount {
   quantity: number;
 }
 
-interface ProductRevenue {
-  name: string;
-  amount: number;
-}
+// interface ProductRevenue {
+//   name: string;
+//   amount: number;
+// }
 
 export interface PurchaseStatistics {
   startDate: Date;
@@ -55,7 +55,7 @@ export interface PurchaseStatistics {
   numberOfPurchases: number;
   averagePayment: number;
   mostSoldProductsByItems: ProductCount[];
-  mostSoldProductsByRevenue: ProductRevenue[];
+  // mostSoldProductsByRevenue: ProductRevenue[];
   numberOfEnergyDrinksSold: number;
 }
 
@@ -99,28 +99,28 @@ export function mostBoughtProducts(purchases: Purchase[]): ProductCount[] {
   );
 }
 
-export function mostBoughtProductsByRevenue(
-  purchases: Purchase[]
-): ProductRevenue[] {
-  const products = purchases.reduce((acc, purchase) => {
-    purchase.products.forEach((product) => {
-      const name = product.name;
-      const amount = product.grossValue / 100;
-      acc[name] = acc[name] ? acc[name] + amount : amount;
-    });
-    return acc;
-  }, {} as Record<string, number>);
+// export function mostBoughtProductsByRevenue(
+//   purchases: Purchase[]
+// ): ProductRevenue[] {
+//   const products = purchases.reduce((acc, purchase) => {
+//     purchase.products.forEach((product) => {
+//       const name = product.name;
+//       const amount = product.grossValue / 100;
+//       acc[name] = acc[name] ? acc[name] + amount : amount;
+//     });
+//     return acc;
+//   }, {} as Record<string, number>);
 
-  // Convert the object to an array of [productName, amount] pairs
-  const productArray = Object.entries(products);
+//   // Convert the object to an array of [productName, amount] pairs
+//   const productArray = Object.entries(products);
 
-  // Sort the array in descending order based on the amount
-  productArray.sort((a, b) => b[1] - a[1]);
+//   // Sort the array in descending order based on the amount
+//   productArray.sort((a, b) => b[1] - a[1]);
 
-  return productArray.map(
-    ([name, amount]) => ({ name, amount } as ProductRevenue)
-  );
-}
+//   return productArray.map(
+//     ([name, amount]) => ({ name, amount } as ProductRevenue)
+//   );
+// }
 
 export function numberOfEnergyDrinksBougt(purchases: Purchase[]): number {
   return purchases.reduce((acc, purchase) => {

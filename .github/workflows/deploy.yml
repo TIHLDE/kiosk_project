@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - PRODUCTION
 
 jobs:
   deploy:
@@ -30,7 +30,7 @@ jobs:
           echo 'NEXT_PUBLIC_LEPTON_API_URL="${{ secrets.NEXT_PUBLIC_LEPTON_API_URL }}"' >> .env
           echo 'ALLOWED_GROUP_SLUGS="${{ secrets.ALLOWED_GROUP_SLUGS }}"' >> .env
           echo 'NEXTAUTH_SECRET="${{ secrets.NEXTAUTH_SECRET }}"' >> .env
-        
+
       - name: Copy .env to OpenStack server
         run: |
           scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:${{ secrets.PATH }}
