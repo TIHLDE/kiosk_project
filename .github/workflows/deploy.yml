@@ -38,6 +38,5 @@ jobs:
           cd ${{ secrets.PATH }}
           chmod 0600 .env
           git pull -f
-          npm install
           make prod
           ENDSSH
