@@ -1,4 +1,3 @@
-import ReloadComponent from "./reload-component";
 import { getPurchaseStats } from "./server/zettle";
 import Image from "next/image";
 
@@ -36,7 +35,7 @@ export default async function Home() {
         </div>
         <div className="bg-gray-100 flex-box p-12 text-black flex flex-col justify-center rounded-xl space-y-4">
           <h1 className="text-2xl font-bold">
-            Mest solgte produkter siste {data?.numberOfPurchases} betalinger
+            Mest solgte produkter siste {data?.numberOfPurchases} betalinger xxx
           </h1>
           {data ? (
             <div className="grid grid-cols-3 gap-3">
