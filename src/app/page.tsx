@@ -15,7 +15,6 @@ export default async function Home() {
 
   return (
     <div>
-      {/* <ReloadComponent /> */}
       <div className="bg-gradient-to-bl from-gray-100 to-gray-300 w-full h-screen text-white grid grid-cols-2 grid-rows-2 gap-4 p-4 justify-center">
         <div className="bg-gray-100 flex-box p-12 min-w-60 min-h-30 text-black flex flex-col items-center justify-center rounded-xl">
           {data ? (
@@ -35,7 +34,7 @@ export default async function Home() {
         </div>
         <div className="bg-gray-100 flex-box p-12 text-black flex flex-col justify-center rounded-xl space-y-4">
           <h1 className="text-2xl font-bold">
-            Mest solgte produkter siste {data?.numberOfPurchases} betalinger xxx
+            Mest solgte produkter siste {data?.numberOfPurchases} betalinger
           </h1>
           {data ? (
             <div className="grid grid-cols-3 gap-3">
