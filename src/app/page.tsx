@@ -16,7 +16,7 @@ export default async function Home() {
 
   return (
     <div>
-      <ReloadComponent />
+      {/* <ReloadComponent /> */}
       <div className="bg-gradient-to-bl from-gray-100 to-gray-300 w-full h-screen text-white grid grid-cols-2 grid-rows-2 gap-4 p-4 justify-center">
         <div className="bg-gray-100 flex-box p-12 min-w-60 min-h-30 text-black flex flex-col items-center justify-center rounded-xl">
           {data ? (
