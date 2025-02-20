@@ -59,3 +59,28 @@ export const getAccessToken = async (): Promise<string> => {
 
   return accessToken;
 };
+
+export const getSelf = async (): Promise<{uuid: string, organizationUuid: string}> => {
+  const accessToken = await getAccessToken();
+
+  const response = await fetch("https://oauth.zettle.com/users/self", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Authorization": `Bearer ${accessToken}`,
+    },
+    cache: "no-store",
+  });
+
+  if (response.status !== 200) {
+    console.error(response);
+    throw Error("Failed to get a new access token");
+  }
+
+  const data = (await response.json());
+
+  console.log(data);
+
+  return(data);
+
+};
