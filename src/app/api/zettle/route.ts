@@ -5,12 +5,11 @@ import {
   getAveragePayment,
   mostBoughtProducts as mostBoughtProductsByItems,
   // mostBoughtProductsByRevenue,
-  numberOfEnergyDrinksBougt,
-  Purchase,
-  PurchaseStatistics,
+  numberOfEnergyDrinksBougt
 } from "./zettle_data";
 import { getAccessToken } from "@/app/server/token";
 import { fetchPurchases } from "@/app/server/zettle";
+import type { Purchase, PurchaseStatistics } from "@/types";
 
 export async function GET() {
   // Get the access token

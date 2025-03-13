@@ -1,4 +1,4 @@
-//@ts-ignore
+//@ts-expect-error fix this
 export async function POST(req) {
   try {
     const event = await req.json();

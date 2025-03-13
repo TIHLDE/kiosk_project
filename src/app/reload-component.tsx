@@ -9,8 +9,7 @@ export default function ReloadComponent() {
   useEffect(() => {
     // Regular refresh interval
     const interval = setInterval(() => {
-      window.location.reload();
-      console.log("Refreshing route...");
+      router.refresh();
     }, 1000 * 10);
 
     // Connection error handling
