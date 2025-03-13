@@ -1,7 +1,9 @@
-//@ts-ignore
-export async function POST(req) {
+import { Purchase, PurchaseEvent } from "@/types/types";
+
+
+export async function POST(req: Request) {
   try {
-    const event = await req.json();
+    const event: PurchaseEvent = await req.json();
     console.log("Received Zettle Webhook:", event);
 
     return new Response(JSON.stringify({ success: true }), {

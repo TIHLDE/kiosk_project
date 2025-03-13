@@ -9,6 +9,10 @@ import {
   // numberOfEnergyDrinksBougt,
 } from "../api/zettle/zettle_data";
 import { getAccessToken } from "./token";
+import { v1 as uuidv1 } from 'uuid';
+import { getSelf } from "./token";
+
+let subscriptionStart: number;
 
 export async function getPurchaseStats() {
   const accessToken = await getAccessToken();
@@ -84,4 +88,32 @@ export async function fetchPurchases(
   const data = (await response.json()) as PurchaseData;
 
   return data.purchases;
+}
+
+export async function registerWebhook(){
+  if(!subscriptionStart || Date.now() - subscriptionStart > 6600*1000){
+    const access_token = await getAccessToken();
+    const self: {uuid: string, organizationUuid: string} = await getSelf()
+
+    const response = await fetch(`https://pusher.izettle.com/organizations/${self.organizationUuid}/subscriptions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${access_token}`,
+      },
+      body: JSON.stringify({
+        destination: 'https://kiosken.tihlde.org/api/zettle-webhook', // Your Next.js API route
+        eventNames: ['PurchaseCreated'], // Adjust based on Zettle event names
+        transportName: 'WEBHOOK',
+        uuid: uuidv1(),
+        organizationUuid: self.organizationUuid,
+        contactEmail: 'drift@tihlde.org'
+      }),
+    });
+
+    subscriptionStart = Date.now();
+
+    const data = await response.json();
+    console.log(data);
+  }
 }

@@ -1,8 +1,9 @@
-import { getPurchaseStats } from "./server/zettle";
+import { getPurchaseStats, registerWebhook } from "./server/zettle";
 import Image from "next/image";
 
 export default async function Home() {
   const data = await getPurchaseStats();
+  const webhookSubscription = await registerWebhook();
 
   if (!data) {
     return (
