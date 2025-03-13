@@ -1,8 +1,7 @@
 "use server";
 
+import type { Purchase, PurchaseData } from "@/types";
 import {
-  Purchase,
-  PurchaseData,
   getAveragePayment,
   mostBoughtProducts,
   numberOfEnergyDrinksBougt as numberOfEnergyDrinksBought,
