@@ -8,7 +8,7 @@ COPY . .
 
 RUN npm install -g pnpm
 
-RUN pnpm i --frozen-lockfile
+RUN pnpm i --no-frozen-lockfile
 
 ARG SKIP_ENV_VALIDATION=1
 
