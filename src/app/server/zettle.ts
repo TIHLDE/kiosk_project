@@ -92,6 +92,7 @@ export async function fetchPurchases(
 
 export async function registerWebhook(){
   if(!subscriptionStart || Date.now() - subscriptionStart > 6600*1000){
+    console.log("1")
     const access_token = await getAccessToken();
     const self: {uuid: string, organizationUuid: string} = await getSelf()
 

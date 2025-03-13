@@ -3,8 +3,8 @@ import { Purchase, PurchaseEvent } from "@/types/types";
 
 export async function POST(req: Request) {
   try {
-    const event: PurchaseEvent = await req.json();
-    console.log("Received Zettle Webhook:", event);
+    const data: PurchaseEvent = await req.json();
+    console.log("Received Zettle Webhook:", data);
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
