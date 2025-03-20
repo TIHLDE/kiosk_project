@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    concurrency:
+      group: deployment_lock
+      cancel-in-progress: false
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.KEY }}" > ~/.ssh/key
+          chmod 600 ~/.ssh/key
+          ssh-keyscan ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+      - name: Create .env file
+        run: |
+          echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > .env
+          echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> .env
+
+      - name: Copy .env to OpenStack server
+        run: |
+          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/etc/kiosk_dev
+
+      - name: Deploy to OpenStack server
+        run: |
+          ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
+          cd /etc/kiosk_dev
+          chmod 0600 .env
+          git pull -f
+          make dev
+          ENDSSH
