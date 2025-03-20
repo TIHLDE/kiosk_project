@@ -10,5 +10,5 @@ dev:
 	docker build -t kiosken_dev:latest .
 	- docker container stop kiosken_dev
 	- docker container rm kiosken_dev
-	docker run --env-file .env -p 8000:3000 --name kiosken_dev --restart unless-stopped -d kiosken_dev:latest
+	docker run --env-file .env -p 6500:3000 --name kiosken_dev --restart unless-stopped -d kiosken_dev:latest
 	- docker image prune -f
