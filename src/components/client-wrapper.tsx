@@ -26,6 +26,7 @@ export default function ClientWrapper({
         <InfiniteSlider
             className="w-screen h-screen"
         >
+           <div>Det er pushet hit</div>
            <LogoCard />
            <TopSalesCard products={data.mostSoldProductsByItems.slice(0, 11)} />
            <LogoCard />
