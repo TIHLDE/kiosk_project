@@ -10,7 +10,7 @@ export default function ReloadComponent() {
     // Regular refresh interval
     const interval = setInterval(() => {
       router.refresh();
-    }, 1000 * 10);
+    }, 1000 * 60 * 30);
 
     // Connection error handling
     const handleConnectionError = () => {
