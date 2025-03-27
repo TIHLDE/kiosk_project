@@ -10,8 +10,8 @@ export default async function Home() {
   if (!data) {
     return (
       <div className="bg-black w-full h-screen text-white flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold">Error</h1>
-        <p className="text-4xl pt-10">Failed to fetch data</p>
+        <h1 className="text-2xl font-bold">OPS!</h1>
+        <p className="text-4xl pt-10">Klarte ikke å hente data</p>
       </div>
     );
   }
