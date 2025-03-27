@@ -1,9 +1,9 @@
 import { Purchase } from "@/types";
-import { PurchaseEventMessage } from "./zettle_request";
+
 
 export async function POST(req: any) {
   try {
-    const event: PurchaseEventMessage = await req.json();
+    const event = await req.json();
 
     const payload: Purchase = await JSON.parse(event.payload);
 
