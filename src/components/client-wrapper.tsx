@@ -6,7 +6,6 @@ import type { ProductCount } from "@/types";
 import TopSalesCard from "./display-cards/top-sales";
 import AverageSpentCard from "./display-cards/average-spent";
 import EnergyDrinkCard from "./display-cards/energy-drink";
-import TestCard from "./display-cards/test";
 
 
 interface ClientWrapperProps {
@@ -27,7 +26,6 @@ export default function ClientWrapper({
         <InfiniteSlider
             className="w-screen h-screen"
         >
-           <TestCard />
            <LogoCard />
            <TopSalesCard products={data.mostSoldProductsByItems.slice(0, 11)} />
            <LogoCard />
