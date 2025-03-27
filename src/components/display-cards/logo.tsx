@@ -10,8 +10,8 @@ export default function LogoCard() {
             <Image
                 src="/drift-logo.png"
                 alt="Drift logo"
-                width={500}
-                height={500}
+                width={600}
+                height={600}
             />
         </CardWrapper>
     );

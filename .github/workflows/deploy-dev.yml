@@ -30,12 +30,12 @@ jobs:
 
       - name: Copy .env to OpenStack server
         run: |
-          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/etc/kiosk_dev/kiosk_project
+          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev
 
       - name: Deploy to OpenStack server
         run: |
           ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
-          cd /etc/kiosk_dev/kiosk_project
+          cd /var/www/kiosk_project_dev
           chmod 0600 .env
           git pull -f
           make dev
