@@ -12,12 +12,12 @@ const registerWebhook = async () => {
       Authorization: `Bearer ${access_token}`,
     },
     body: JSON.stringify({
-      destination: 'https://kiosken.tihlde.org/api/zettle-webhook', // Your Next.js API route
+      destination: 'https://dev-kiosken.tihlde.org/api/zettle-webhook', // Your Next.js API route
       eventNames: ['PurchaseCreated'], // Adjust based on Zettle event names
       transportName: 'WEBHOOK',
       uuid: uuidv1(),
       organizationUuid: self.organizationUuid,
-      contactEmail: 'mateosouto22@gmail.com'
+      contactEmail: 'driftsminister@tihlde.org'
     }),
   });
 
