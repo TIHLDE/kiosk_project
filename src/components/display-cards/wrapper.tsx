@@ -1,6 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { CarouselItem } from "../motion-primitives/carousel";
+import Image from "next/image";
 
 
 interface CardWrapperProps {
@@ -11,15 +13,23 @@ interface CardWrapperProps {
 
 export default function CardWrapper({
     children,
-    className
+    className,
 }: CardWrapperProps) {
     return (
-        <div
-            className="w-screen h-screen py-6"
+        <CarouselItem
+            className="w-screen h-screen p-6"
         >
-            <div className={cn("bg-white rounded-xl border shadow-sm w-full h-full", className)}>
+            <div className={cn("bg-white rounded-xl border border-gray-300 shadow-sm w-full h-full relative", className)}>
+                <div className="absolute top-2 right-2">
+                    <Image
+                        src="/drift-logo.png"
+                        alt="Drift logo"
+                        width={100}
+                        height={100}
+                    />
+                </div>
                 {children}
             </div>
-        </div>
+        </CarouselItem>
     );
 };
