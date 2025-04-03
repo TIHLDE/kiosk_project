@@ -1,12 +1,8 @@
 "use client";
 
-import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
-import LogoCard from "./display-cards/logo";
 import type { ProductCount } from "@/types";
-import TopSalesCard from "./display-cards/top-sales";
-import AverageSpentCard from "./display-cards/average-spent";
-import EnergyDrinkCard from "./display-cards/energy-drink";
-
+import { Carousel } from "./motion-primitives/carousel";
+import CarouselContentWrapper from "./carousel-wrapper";
 
 interface ClientWrapperProps {
     data: {
@@ -23,15 +19,10 @@ export default function ClientWrapper({
     data
 }: ClientWrapperProps) {
     return (
-        <InfiniteSlider
-            className="w-screen h-screen"
-        >
-           <LogoCard />
-           <TopSalesCard products={data.mostSoldProductsByItems.slice(0, 11)} />
-           <LogoCard />
-           <AverageSpentCard averageSpent={data.averagePayment} />
-           <LogoCard />
-           <EnergyDrinkCard energyDrinks={data.numberOfEnergyDrinksSold} />
-        </InfiniteSlider>
+        <div className="w-screen h-screen overflow-hidden">
+            <Carousel>
+                <CarouselContentWrapper data={data} />
+            </Carousel>
+        </div>
     );
 };
