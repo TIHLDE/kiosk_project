@@ -4,7 +4,6 @@ import type { ProductCount } from "@/types";
 import { Carousel } from "./motion-primitives/carousel";
 import CarouselContentWrapper from "./carousel-wrapper";
 
-
 interface ClientWrapperProps {
     data: {
         endDate: Date;

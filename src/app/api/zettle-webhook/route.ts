@@ -1,8 +1,15 @@
-//@ts-expect-error fix this
-export async function POST(req) {
+import { Purchase } from "@/types";
+
+
+export async function POST(req: any) {
   try {
     const event = await req.json();
-    console.log("Received Zettle Webhook:", event);
+
+    const payload: Purchase = await JSON.parse(event.payload);
+
+    console.log(payload);
+    
+    // Send payload through websocket here
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
