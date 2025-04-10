@@ -17,7 +17,7 @@ const App: React.FC = () => {
     // Her må du bruke riktig port og passord for WebSocket-serveren
     // Pass på at porten er den samme som serveren din kjører på
     // og at passordet er det samme som du bruker i serverkoden
-    const socketUrl = `${protocol}://${window.location.hostname}:8001?password=your-secure-password`;
+    const socketUrl = `${protocol}://${window.location.hostname}/ws?password=your-secure-password`;
     const ws = new WebSocket(socketUrl);
 
     ws.onopen = () => {
