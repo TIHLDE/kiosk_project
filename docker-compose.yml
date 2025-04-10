@@ -6,7 +6,7 @@ services:
       context: ./nextjs
     container_name: kiosken-test
     ports:
-      - "6000:3000"
+      - "6500:3000"
     env_file:
       - .env
     restart: unless-stopped
