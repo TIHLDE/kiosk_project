@@ -38,6 +38,6 @@ jobs:
           cd /var/www/kiosk_project_dev
           chmod 0600 .env
           git pull -f
-          docker compose down
-          docker compose up --build -d
+          make dev
+          make websocket-dev
           ENDSSH
