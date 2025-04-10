@@ -32,11 +32,12 @@ jobs:
         run: |
           scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev
 
-      - name: Deploy to OpenStack server
+      - name: Deploy frontend + WebSocket server
         run: |
           ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
           cd /var/www/kiosk_project_dev
           chmod 0600 .env
           git pull -f
           make dev
+          make websocket-dev
           ENDSSH
