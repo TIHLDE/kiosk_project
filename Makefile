@@ -17,9 +17,9 @@ dev:
 websocket:
 	docker build -f ./server/Dockerfile -t websocket_server:latest ./server/
 	- docker rm -f websocket_server
-	docker run --env-file .env -p 8001:8001 --name websocket_server --restart unless-stopped -d websocket_server:latest
+	docker run --env-file .env -p 8002:8001 --name websocket_server --restart unless-stopped -d websocket_server:latest
 
 websocket-dev:
 	docker build -f ./server/Dockerfile -t websocket_server_dev:latest ./server/
 	- docker rm -f websocket_server_dev
-	docker run --env-file .env -p 8002:8001 --name websocket_server_dev --restart unless-stopped -d websocket_server_dev:latest
+	docker run --env-file .env -p 127.0.0.1:8001:8001 --name websocket_server_dev --restart unless-stopped -d websocket_server_dev:latest
