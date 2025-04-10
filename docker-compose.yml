@@ -3,7 +3,7 @@ version: '3.8'
 services:
   nextjs:
     build:
-      context: ./nextjs/nextjs_proc
+      context: ./nextjs
     container_name: kiosken-test
     ports:
       - "6000:3000"
@@ -14,7 +14,7 @@ services:
   websocket-server:
     build:
       context: ./server
-    container_name: kiosk_ws-test
+    container_name: kiosken_ws
     ports:
       - "8001:8001"
     restart: unless-stopped
