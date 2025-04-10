@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY ./dist ./dist
 
-RUN npm install -g pnpm
-
-RUN pnpm i --no-frozen-lockfile
+RUN npm install
 
 ARG SKIP_ENV_VALIDATION=1
 
