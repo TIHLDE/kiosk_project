@@ -39,5 +39,4 @@ jobs:
           chmod 0600 .env
           git pull -f
           make dev
-          make websocket-dev
           ENDSSH

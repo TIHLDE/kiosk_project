@@ -25,8 +25,8 @@ RUN rm -f .env
 COPY --from=build /build/.next/static ./.next/static/
 COPY --from=build /build/public ./public/
 
-EXPOSE 3000
-ENV PORT=3000
+EXPOSE 6500
+ENV PORT=6500
 
 ENV NEXT_TELEMETRY_DISABLED=1
 

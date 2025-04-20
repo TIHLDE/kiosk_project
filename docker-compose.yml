@@ -1,20 +1,20 @@
 version: '3.8'
 
 services:
-  nextjs:
-    build:
-      context: ./nextjs
-    container_name: kiosken-test
-    ports:
-      - "6500:3000"
-    env_file:
-      - .env
-    restart: unless-stopped
-
-  websocket-server:
+  node-server:
     build:
       context: ./server
-    container_name: kiosken_ws
+      dockerfile: Dockerfile
     ports:
       - "8001:8001"
-    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
+  nextjs-app:
+    build:
+      context: ./nextjs
+      dockerfile: Dockerfile
+    ports:
+      - "6500:6500"
+    environment:
+      - NODE_ENV=production

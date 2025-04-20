@@ -1,20 +1,19 @@
-FROM node:current-alpine
+FROM node:alpine
 
+# Set working directory
 WORKDIR /app
 
-# Copy the package.json and package-lock.json into the container
-COPY ./package.json ./package-lock.json ./
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
-# Install the dependencies
+# Install dependencies
 RUN npm install
 
-# Now copy the rest of your files (e.g., dist)
-COPY ./dist ./dist
+# Copy the rest of the application
+COPY . .
 
-# Set environment variables
-ARG SKIP_ENV_VALIDATION=1
-
+# Expose the port the server listens on
 EXPOSE 8001
 
-# Run the WebSocket server
+# Start the server
 CMD ["node", "dist/index.js"]
