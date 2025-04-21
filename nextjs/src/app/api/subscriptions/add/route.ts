@@ -1,7 +1,8 @@
-import { getAccessToken, getSelf } from "../server/token";
+import { getAccessToken } from "../../../server/token";
+import { getSelf } from "../../../server/token";
 import { v1 as uuidv1 } from 'uuid';
 
-const registerWebhook = async () => {
+export async function POST(){
   const access_token = await getAccessToken();
   const self: {uuid: string, organizationUuid: string} = await getSelf()
 
@@ -22,9 +23,9 @@ const registerWebhook = async () => {
   });
 
   const data = await response.json();
-  console.log(data);
-};
 
-export default function page(){
-  registerWebhook();
+  return new Response(JSON.stringify({ success: true, data }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  });
 }
