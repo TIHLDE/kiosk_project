@@ -9,7 +9,7 @@ export async function POST(req: any) {
     console.log(payload);
     
     // Send payload through websocket here
-    const response = await fetch("http://dev-kiosken.tihlde.org/webhook", {
+    const response = await fetch("http://dev-kiosken.tihlde.org:8001/webhook", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

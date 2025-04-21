@@ -3,7 +3,7 @@
 export default function page(){
 
   const addSubscription = async () => {
-    const response = await fetch("https://dev-kiosken.tihlde.org/subscriptions/add");
+    const response = await fetch("https://dev-kiosken.tihlde.org/api/subscriptions/add");
 
     console.log(response);
   }
