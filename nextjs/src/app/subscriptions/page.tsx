@@ -9,7 +9,9 @@ export default function page(){
   }
 
   const getSubscriptions = async () => {
-    const response = await fetch("https://dev-kiosken.tihlde.org/api/subscriptions/get");
+    const response = await fetch("https://dev-kiosken.tihlde.org/api/subscriptions/get", {
+      method:'GET'
+    });
 
     console.log(response);
   }
