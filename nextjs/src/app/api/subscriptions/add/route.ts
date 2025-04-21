@@ -1,8 +1,7 @@
-import { getAccessToken } from "../../../server/token";
-import { getSelf } from "../../../server/token";
+import { getAccessToken, getSelf } from "../../../server/token";
 import { v1 as uuidv1 } from 'uuid';
 
-export async function POST(){
+export async function GET(){
   const access_token = await getAccessToken();
   const self: {uuid: string, organizationUuid: string} = await getSelf()
 
