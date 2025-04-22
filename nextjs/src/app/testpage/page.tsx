@@ -10,32 +10,40 @@ const App: React.FC = () => {
   const [messages, setMessages] = useState<string[]>([]);
 
   useEffect(() => {
-    // Velg riktig WebSocket-protokoll basert på om siden er lastet inn over HTTPS eller HTTP
-    // Hvis siden er lastet inn over HTTPS, bruk WSS (WebSocket Secure)
-    // Ellers bruk WS (WebSocket)
-    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
-    // Her må du bruke riktig port og passord for WebSocket-serveren
-    // Pass på at porten er den samme som serveren din kjører på
-    // og at passordet er det samme som du bruker i serverkoden
-    const socketUrl = `${protocol}://${window.location.hostname}/ws?password=your-secure-password`;
-    const ws = new WebSocket(socketUrl);
 
-    ws.onopen = () => {
-      console.log('WebSocket connected');
-    };
+    const connectWebSocket = () => {
+      // Velg riktig WebSocket-protokoll basert på om siden er lastet inn over HTTPS eller HTTP
+      // Hvis siden er lastet inn over HTTPS, bruk WSS (WebSocket Secure)
+      // Ellers bruk WS (WebSocket)
+      const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+      // Her må du bruke riktig port og passord for WebSocket-serveren
+      // Pass på at porten er den samme som serveren din kjører på
+      // og at passordet er det samme som du bruker i serverkoden
+      const socketUrl = `${protocol}://${window.location.hostname}/ws?password=your-secure-password`;
+      const ws = new WebSocket(socketUrl);
 
-    ws.onmessage = (event: MessageEvent) => {
-      console.log('Message received:', event.data);
-      setMessages(prevMessages => [...prevMessages, event.data]);
-    };
+      ws.onopen = () => {
+        console.log('WebSocket connected');
+      };
 
-    ws.onerror = (error) => {
-      console.error('WebSocket error:', error);
-    };
+      ws.onmessage = (event: MessageEvent) => {
+        console.log('Message received:', event.data);
+        setMessages(prevMessages => [...prevMessages, event.data]);
+      };
 
-    ws.onclose = (event) => {
-      console.log('WebSocket disconnected');
+      ws.onerror = (error) => {
+        console.error('WebSocket error:', error);
+      };
+
+      ws.onclose = (event) => {
+        console.log('WebSocket disconnected', event);
+        setTimeout(connectWebSocket, 1000);
+      }
+
+      return ws;
     }
+
+    const ws = connectWebSocket();
 
     // Lukk WebSocket-tilkoblingen når komponenten avmonteres
     return () => {
