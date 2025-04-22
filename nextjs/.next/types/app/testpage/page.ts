@@ -1,4 +1,4 @@
-// File: /home/mateo/Documents/Git/kiost_project/src/app/testpage/page.tsx
+// File: /home/mateo/Documents/Git/kiost_project/nextjs/src/app/testpage/page.tsx
 import * as entry from '../../../../src/app/testpage/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
