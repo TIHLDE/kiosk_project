@@ -12,15 +12,12 @@ jobs:
     concurrency:
       group: deployment_lock
       cancel-in-progress: false
-    env:
-      PROJECT_PATH: /var/www/kiosk_project_dev
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
       - name: Set up SSH key
         run: |
-          set +x
           mkdir -p ~/.ssh
           echo "${{ secrets.KEY }}" > ~/.ssh/key
           chmod 600 ~/.ssh/key
@@ -28,27 +25,18 @@ jobs:
 
       - name: Create .env file
         run: |
-          set +x
           echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > .env
           echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> .env
 
       - name: Copy .env to OpenStack server
         run: |
-          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:${{ env.PROJECT_PATH }}/.env.temp
-          ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
-          set -e
-          cd ${{ env.PROJECT_PATH }}
-          cat .env.temp >> .env
-          rm .env.temp
-          ENDSSH
+          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev
 
       - name: Deploy frontend + WebSocket server
         run: |
           ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
-          set -e
-          cd ${{ env.PROJECT_PATH }}
+          cd /var/www/kiosk_project_dev
           chmod 0600 .env
           git pull -f
-          which pnpm || curl -fsSL https://get.pnpm.io/install.sh | sh -
           make dev
           ENDSSH
