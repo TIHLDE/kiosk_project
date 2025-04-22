@@ -33,6 +33,10 @@ const App: React.FC = () => {
       console.error('WebSocket error:', error);
     };
 
+    ws.onclose = (event) => {
+      console.log('WebSocket disconnected');
+    }
+
     // Lukk WebSocket-tilkoblingen når komponenten avmonteres
     return () => {
       ws.close();
