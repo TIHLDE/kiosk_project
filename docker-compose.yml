@@ -16,3 +16,5 @@ services:
       - "6500:6500"
     environment:
       - NODE_ENV=production
+    env_file:
+      - ./nextjs/.env
