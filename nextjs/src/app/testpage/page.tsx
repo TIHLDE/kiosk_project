@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react';
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<string[]>([]);
+  let pingInterval: NodeJS.Timeout;
 
   useEffect(() => {
 
@@ -24,11 +25,24 @@ const App: React.FC = () => {
 
       ws.onopen = () => {
         console.log('WebSocket connected');
+
+        pingInterval = setInterval(() => {
+          if (ws.readyState === WebSocket.OPEN) {
+            console.log("Sending ping...");
+            ws.send("ping");
+          }
+        }, 30000);
       };
 
       ws.onmessage = (event: MessageEvent) => {
         console.log('Message received:', event.data);
-        setMessages(prevMessages => [...prevMessages, event.data]);
+
+        if (event.data === "pong") {
+          console.log("Pong received, connection is alive");
+        } else {
+          setMessages((prevMessages) => [...prevMessages, event.data]);
+        }
+
       };
 
       ws.onerror = (error) => {
@@ -37,6 +51,8 @@ const App: React.FC = () => {
 
       ws.onclose = (event) => {
         console.log('WebSocket disconnected', event);
+        clearInterval(pingInterval);
+        
         setTimeout(connectWebSocket, 1000);
       }
 
