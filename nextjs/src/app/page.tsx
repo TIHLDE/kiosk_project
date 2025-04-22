@@ -15,7 +15,7 @@ export default async function Home() {
       </div>
     );
   }
-//
+
   return (
     <div className="bg-gray-50 flex items-center justify-center h-screen w-full">
       <ReloadComponent />
