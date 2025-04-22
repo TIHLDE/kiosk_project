@@ -34,6 +34,10 @@ export const getAccessToken = async (): Promise<string> => {
     return AccessToken;
   }
 
+  if (!ZETTLE_CLIENT_ID || !ZETTLE_CLIENT_SECRET) {
+    throw new Error("Missing ZETTLE_CLIENT_ID or ZETTLE_CLIENT_SECRET environment variables");
+  }
+
   const response = await fetch("https://oauth.zettle.com/token", {
     method: "POST",
     headers: {
@@ -41,8 +45,8 @@ export const getAccessToken = async (): Promise<string> => {
     },
     body: new URLSearchParams({
       grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      client_id: ZETTLE_CLIENT_ID!,
-      assertion: ZETTLE_CLIENT_SECRET!,
+      client_id: ZETTLE_CLIENT_ID,
+      assertion: ZETTLE_CLIENT_SECRET,
     }),
     cache: "no-store",
   });
