@@ -6,7 +6,7 @@ export async function GET(){
     const access_token = await getAccessToken();
     const self: {uuid: string, organizationUuid: string} = await getSelf();
 
-    const response = await fetch(`https://pusher.izettle.com/organizations/${self}/subscriptions`, {
+    const response = await fetch(`https://pusher.izettle.com/organizations/${self.organizationUuid}/subscriptions`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${access_token}`,

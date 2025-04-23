@@ -21,10 +21,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-    "/testpage/page": [
+    "/subscriptions/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/testpage/page.js"
+      "static/chunks/app/subscriptions/page.js"
     ]
   }
 }
