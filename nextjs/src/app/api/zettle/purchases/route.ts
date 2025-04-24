@@ -7,7 +7,7 @@ export async function GET(){
   const accessToken = await getAccessToken();
   const startDate = new Date();
   const endDate = new Date();
-  startDate.setDate(startDate.getDate() - 1);
+  startDate.setDate(startDate.getDate() - 7);
 
   const data = await fetchPurchases(startDate, endDate, accessToken);
 
