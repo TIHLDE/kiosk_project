@@ -5,19 +5,20 @@ import { Carousel } from "./motion-primitives/carousel";
 import CarouselContentWrapper from "./carousel-wrapper";
 
 interface ClientWrapperProps {
-    data: {
-        endDate: Date;
-        startDate: Date;
-        numberOfPurchases: number;
-        averagePayment: number;
-        mostSoldProductsByItems: ProductCount[];
-        numberOfEnergyDrinksSold: number;
-    }
+    // data: {
+    //     endDate: Date;
+    //     startDate: Date;
+    //     numberOfPurchases: number;
+    //     averagePayment: number;
+    //     mostSoldProductsByItems: ProductCount[];
+    //     numberOfEnergyDrinksSold: number;
+    // }
 };
 
 export default function ClientWrapper({
+    //@ts-ignore
     data
-}: ClientWrapperProps) {
+}) {
     return (
         <div className="w-screen h-screen overflow-hidden">
             <Carousel>

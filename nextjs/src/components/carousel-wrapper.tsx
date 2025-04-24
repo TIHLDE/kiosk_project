@@ -6,6 +6,7 @@ import { CarouselContent, useCarousel } from "./motion-primitives/carousel";
 import TopSalesCard from "./display-cards/top-sales";
 import AverageSpentCard from "./display-cards/average-spent";
 import EnergyDrinkCard from "./display-cards/energy-drink";
+import TotalProductsSold from "./display-cards/all-sold";
 
 
 interface CarouselContentWrapperProps {
@@ -41,9 +42,10 @@ export default function CarouselContentWrapper({
 
     return (
         <CarouselContent>
-            <TopSalesCard products={data.mostSoldProductsByItems.slice(0, 11)} />
+            <TotalProductsSold allPurchases={data}/>
+            {/* <TopSalesCard products={data.mostSoldProductsByItems.slice(0, 11)} />
             <AverageSpentCard averageSpent={data.averagePayment} />
-            <EnergyDrinkCard energyDrinks={data.numberOfEnergyDrinksSold} />
+            <EnergyDrinkCard energyDrinks={data.numberOfEnergyDrinksSold} /> */}
         </CarouselContent>
     );
 };
