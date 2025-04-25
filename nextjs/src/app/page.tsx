@@ -33,7 +33,7 @@ export default function Home() {
         if (event.data === "pong") {
           console.log("Pong received, connection is alive");
         } else {
-          setPurchases((prevMessages) => [...prevMessages, event.data]);
+          setPurchases((prevPurchases) => [...prevPurchases, event.data]);
         }
       };
 

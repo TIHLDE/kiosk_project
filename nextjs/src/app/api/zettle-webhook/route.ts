@@ -3,10 +3,6 @@ import { Purchase } from "../../../types";
 export async function POST(req: any) {
   try {
     const event = await req.json();
-
-    const payload: Purchase = await JSON.parse(event.payload);
-
-    console.log(payload);
     
     // Send payload through websocket here
     const response = await fetch("http://dev-kiosken.tihlde.org:8001/webhook", {
