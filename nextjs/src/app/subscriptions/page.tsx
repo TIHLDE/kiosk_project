@@ -27,6 +27,7 @@ export default function Page() {
       }
   
       const data = await response.json();
+      console.log(data);
       setSubscriptions(data);
     } catch (error) {
       console.error("Error fetching subscriptions:", error);
@@ -103,7 +104,7 @@ export default function Page() {
           </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {subscriptions.map((subscription) => (
+          {/* {subscriptions.map((subscription) => (
             <div
               key={subscription.uuid}
               className="bg-white shadow-md rounded-lg p-6 border border-gray-200"
@@ -139,7 +140,7 @@ export default function Page() {
                 <span className="font-semibold">Signing Key:</span> {subscription.signingKey}
               </p>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </>
