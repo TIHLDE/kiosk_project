@@ -6,26 +6,26 @@ export async function POST(request: any) {
     const self = await getSelf();
     const access_token = await getAccessToken();
 
-    // Use Promise.all to handle multiple async requests
-    await Promise.all(
-      subscriptionIds.map(async (subscription: string) => {
-        const response = await fetch(
-          `https://pusher.izettle.com/organizations/${self.organizationUuid}/subscriptions/${subscription}`,
-          {
-            method: 'DELETE', // Use DELETE method
-            headers: {
-              Authorization: `Bearer ${access_token}`,
-            },
-          }
-        );
+    // // Use Promise.all to handle multiple async requests
+    // await Promise.all(
+    //   subscriptionIds.map(async (subscription: string) => {
+    //     const response = await fetch(
+    //       `https://pusher.izettle.com/organizations/${self.organizationUuid}/subscriptions/${subscription}`,
+    //       {
+    //         method: 'DELETE', // Use DELETE method
+    //         headers: {
+    //           Authorization: `Bearer ${access_token}`,
+    //         },
+    //       }
+    //     );
 
-        if (!response.ok) {
-          throw new Error(`Failed to delete subscription: ${subscription}`);
-        }
-      })
-    );
+    //     if (!response.ok) {
+    //       throw new Error(`Failed to delete subscription: ${subscription}`);
+    //     }
+    //   })
+    // );
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, subscriptionIds }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
