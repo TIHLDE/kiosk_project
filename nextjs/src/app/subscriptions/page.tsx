@@ -12,13 +12,13 @@ export default function Page() {
   }, []);
 
   const addSubscription = async () => {
-    const response = await fetch("https://dev-kiosken.tihlde.org/api/subscriptions/add");
+    const response = await fetch("https://kiosken.tihlde.org/api/subscriptions/add");
     console.log(response);
   };
 
   const getSubscriptions = async () => {
     try {
-      const response = await fetch("https://dev-kiosken.tihlde.org/api/subscriptions/get", {
+      const response = await fetch("https://kiosken.tihlde.org/api/subscriptions/get", {
         method: 'GET',
       });
   
@@ -55,7 +55,7 @@ export default function Page() {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch("https://dev-kiosken.tihlde.org/api/subscriptions/delete", {
+      const response = await fetch("https://kiosken.tihlde.org/api/subscriptions/delete", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
