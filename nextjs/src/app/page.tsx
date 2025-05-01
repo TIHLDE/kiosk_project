@@ -79,8 +79,7 @@ export default function Home() {
         const data = await response.json();
         console.log(data);
         console.log(data.data);
-        console.log(data.data.purchases);
-        setPurchases(data.data.purchases);
+        setPurchases(data.data);
       } catch (error) {
         console.error("Error fetching purchases:", error);
       } finally {
