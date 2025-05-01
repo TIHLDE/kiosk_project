@@ -26,7 +26,7 @@ export default function TopSalesCard(props: any) {
     
         setProducts(productArray.map(([name, quantity]) => ({ name, quantity } as ProductCount)));
     }, [allPurchases]);
-
+    
     return (
         <CardWrapper className="flex items-center justify-center">
             <div className="max-w-5xl w-full mx-auto grid grid-cols-2 gap-24">
