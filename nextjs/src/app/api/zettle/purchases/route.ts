@@ -2,13 +2,36 @@
 
 import { getAccessToken } from "../../../server/token";
 import { fetchPurchases } from "../../../server/zettle";
+import { Purchase } from "../../../../types";
 
 export async function GET(){
   const accessToken = await getAccessToken();
-  const startDate = new Date(2025, 0, 1); // Months are 0-indexed, Days are not
-  const endDate = new Date();
 
-  const data = await fetchPurchases(startDate, endDate, accessToken);
+// Fetch the data
+  let data: Purchase[] = [];
+
+  let endDate = new Date();
+  let startDate = new Date(endDate.valueOf() - 10 * 24 * 60 * 60 * 1000);
+  const targetDate = new Date(2025, 0, 1);
+
+  const promises: Promise<Purchase[]>[] = [];
+
+  while (startDate > targetDate) {
+    promises.push(fetchPurchases(startDate, endDate, accessToken));
+
+    // Wait 0.1 seconds
+    await new Promise((resolve) => setTimeout(resolve, 50));
+
+    // Decrement date by 10 days
+    endDate = startDate;
+    startDate = new Date(startDate.valueOf() - 10 * 24 * 60 * 60 * 1000);
+  }
+
+  const results = await Promise.all(promises);
+
+  results.forEach((purchases) => {
+    data = data.concat(purchases);
+  });
 
   return new Response(JSON.stringify({ success: true, data }), {
     status: 200,

@@ -7,8 +7,7 @@ import { Fragment, useEffect, useState } from "react";
 export default function TopSalesCard(props: any) {
     const [allPurchases, setAllPurchases] = useState<Purchase[]>(props.data);
     const [products, setProducts] = useState<ProductCount[]>([]);
-    console.log(allPurchases);
-
+    
     useEffect(() => {
         const productCounts = allPurchases.reduce((acc, purchase) => {
         purchase.products.forEach((product) => {
@@ -26,7 +25,7 @@ export default function TopSalesCard(props: any) {
     
         setProducts(productArray.map(([name, quantity]) => ({ name, quantity } as ProductCount)));
     }, [allPurchases]);
-    
+
     return (
         <CardWrapper className="flex items-center justify-center">
             <div className="max-w-5xl w-full mx-auto grid grid-cols-2 gap-24">
