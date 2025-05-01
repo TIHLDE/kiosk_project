@@ -36,7 +36,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const http_1 = require("http");
 const ws_1 = __importStar(require("ws"));
 // Velg hvilken port du vil bruke
-const PORT = 8001;
+const PORT = 8002;
 // Lag en enkel HTTP server med node sitt innebygde http-modul
 const server = (0, http_1.createServer)((req, res) => {
     // Sjekk om forespørselen er til "/webhook" og metoden er POST
