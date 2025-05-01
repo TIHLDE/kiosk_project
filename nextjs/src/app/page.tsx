@@ -86,7 +86,7 @@ export default function Home() {
         setLoading(false); // Set loading to false after fetching
       }
     };
-
+//
     fetchPurchase();
   }, []);
 
