@@ -2,7 +2,7 @@ services:
   node-server:
     build:
       context: ./server
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - "8001:8001"
     environment:
