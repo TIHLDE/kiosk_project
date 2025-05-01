@@ -37,6 +37,7 @@ jobs:
           ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
           cd /var/www/kiosk_project/nextjs
           chmod 0600 .env
+          cd ..
           git pull -f
           make prod
           ENDSSH
