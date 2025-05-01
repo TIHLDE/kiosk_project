@@ -30,13 +30,14 @@ jobs:
 
       - name: Copy .env to OpenStack server
         run: |
-          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev
+          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev/nextjs
 
-      - name: Deploy to OpenStack server
+      - name: Deploy frontend + WebSocket server
         run: |
           ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
-          cd /var/www/kiosk_project_dev
+          cd /var/www/kiosk_project_dev/nextjs
           chmod 0600 .env
+          cd ..
           git pull -f
           make dev
           ENDSSH
