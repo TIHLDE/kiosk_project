@@ -1,6 +1,7 @@
 "use client"
 
 import ClientWrapper from "../components/client-wrapper";
+import PaymentSuccessful from "../components/display-cards/payment-successful";
 import ReloadComponent from "./reload-component";
 import { getAccessToken } from "./server/token";
 import { getPurchaseStats, fetchPurchases } from "./server/zettle";
@@ -9,6 +10,7 @@ import React, { useState, useEffect } from "react";
 export default function Home() {
   const [purchases, setPurchases] = useState<string[]>([]);
   const [loading, setLoading] = useState(true); // Add loading state
+  const [showPaymentSuccess, setShowPaymentSuccess] = useState(false); // State to control visibility of PaymentSuccessful
   let pingInterval: NodeJS.Timeout;
 
   useEffect(() => {
@@ -34,6 +36,12 @@ export default function Home() {
           console.log("Pong received, connection is alive");
         } else {
           setPurchases((prevPurchases) => [...prevPurchases, event.data]);
+
+          // Show the PaymentSuccessful component for 5 seconds
+          setShowPaymentSuccess(true);
+          setTimeout(() => {
+            setShowPaymentSuccess(false);
+          }, 5000);
         }
       };
 
@@ -69,6 +77,9 @@ export default function Home() {
         }
 
         const data = await response.json();
+        console.log(data);
+        console.log(data.data);
+        console.log(data.data.purchases);
         setPurchases(data.data.purchases);
       } catch (error) {
         console.error("Error fetching purchases:", error);
@@ -89,7 +100,15 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-gray-50 flex items-center justify-center h-screen w-full">
+    <div className="relative bg-gray-50 flex items-center justify-center h-screen w-full">
+      {/* Show PaymentSuccessful component when showPaymentSuccess is true */}
+      {showPaymentSuccess && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <PaymentSuccessful />
+        </div>
+      )}
+
+      {/* Main content */}
       <ReloadComponent />
       <ClientWrapper data={purchases} />
     </div>
