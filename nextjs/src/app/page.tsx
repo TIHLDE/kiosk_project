@@ -68,7 +68,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPurchase = async () => {
       try {
-        const response = await fetch('https://dev-kiosken.tihlde.org/api/zettle/purchases', {
+        const response = await fetch('https://kiosken.tihlde.org/api/zettle/purchases', {
           method: 'GET',
         });
 

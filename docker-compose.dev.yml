@@ -11,7 +11,7 @@ services:
   nextjs-app:
     build:
       context: ./nextjs
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - "6500:6500"
     environment:
