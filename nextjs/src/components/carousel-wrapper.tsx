@@ -42,9 +42,9 @@ export default function CarouselContentWrapper({
 
     return (
         <CarouselContent>
-            <TotalProductsSold allPurchases={data}/>
-            {/* <TopSalesCard products={data.mostSoldProductsByItems.slice(0, 11)} />
-            <AverageSpentCard averageSpent={data.averagePayment} />
+            <TotalProductsSold data={data}/>
+            <TopSalesCard data={data} />
+            {/* <AverageSpentCard averageSpent={data.averagePayment} />
             <EnergyDrinkCard energyDrinks={data.numberOfEnergyDrinksSold} /> */}
         </CarouselContent>
     );

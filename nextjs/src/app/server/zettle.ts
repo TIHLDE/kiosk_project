@@ -1,6 +1,6 @@
 "use server";
 
-import type { Purchase, PurchaseData } from "../../types";
+import type { Purchase } from "../../types";
 import {
   getAveragePayment,
   mostBoughtProducts,
@@ -62,7 +62,7 @@ export async function fetchPurchases(
   }
 
   // Parse the response
-  const data = (await response.json()) as PurchaseData;
+  const data = (await response.json()) as Purchase[];
 
-  return data.purchases;
+  return data;
 }
