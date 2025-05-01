@@ -8,13 +8,13 @@ export async function GET(){
   const accessToken = await getAccessToken();
 
 // Fetch the data
-  let data: Purchase[] = [];
+  let data: any = [];
 
   let endDate = new Date();
   let startDate = new Date(endDate.valueOf() - 10 * 24 * 60 * 60 * 1000);
   const targetDate = new Date(2025, 0, 1);
 
-  const promises: Promise<Purchase[]>[] = [];
+  const promises: Promise<any>[] = [];
 
   while (startDate > targetDate) {
     promises.push(fetchPurchases(startDate, endDate, accessToken));
@@ -29,8 +29,8 @@ export async function GET(){
 
   const results = await Promise.all(promises);
 
-  results.forEach((purchases) => {
-    data = data.concat(purchases);
+  results.forEach((result) => {
+    data = data.concat(result.purchases);
   });
 
   return new Response(JSON.stringify({ success: true, data }), {
