@@ -25,19 +25,24 @@ jobs:
 
       - name: Create .env file
         run: |
-          echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > .env
-          echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> .env
+          echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > ./nextjs/.env.prod
+          echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> ./nextjs/.env.prod
+          echo 'NEXT_PUBLIC_URL=${{ secrets.NEXT_PUBLIC_URL_PROD }}' >> ./nextjs/.env.prod
+
+          # Create .env.dev for server
+          echo 'PUBLIC_PORT=${{ secrets.PUBLIC_PORT_PROD }}' > ./server/.env.prod
 
       - name: Copy .env to OpenStack server
         run: |
-          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project/nextjs
+          scp -v -i ~/.ssh/key ./nextjs/.env.prod ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project/nextjs/.env
+
+          scp -v -i ~/.ssh/key ./server/.env.prod ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project/server/.env
 
       - name: Deploy to OpenStack server
         run: |
           ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
-          cd /var/www/kiosk_project/nextjs
-          chmod 0600 .env
-          cd ..
+          cd /var/www/kiosk_project
+          chmod 0600 nextjs/.env server/.env
           git pull -f
           make prod
           ENDSSH

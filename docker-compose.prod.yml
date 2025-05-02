@@ -7,6 +7,8 @@ services:
       - "8002:8002"
     environment:
       - NODE_ENV=production
+    env_file:
+      - ./server/.env
 
   nextjs-app:
     build:

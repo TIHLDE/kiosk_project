@@ -41,7 +41,7 @@ export default function Home() {
           setShowPaymentSuccess(true);
           setTimeout(() => {
             setShowPaymentSuccess(false);
-          }, 5000);
+          }, 4000);
         }
       };
 

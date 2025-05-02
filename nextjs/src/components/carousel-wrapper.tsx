@@ -7,6 +7,7 @@ import TopSalesCard from "./display-cards/top-sales";
 import AverageSpentCard from "./display-cards/average-spent";
 import EnergyDrinkCard from "./display-cards/energy-drink";
 import TotalProductsSold from "./display-cards/all-sold";
+import SubwaySurfers from "./display-cards/subway";
 
 
 interface CarouselContentWrapperProps {
@@ -46,6 +47,7 @@ export default function CarouselContentWrapper({
             <TopSalesCard data={data} />
             {/* <AverageSpentCard averageSpent={data.averagePayment} />
             <EnergyDrinkCard energyDrinks={data.numberOfEnergyDrinksSold} /> */}
+            <SubwaySurfers/>
         </CarouselContent>
     );
 };
