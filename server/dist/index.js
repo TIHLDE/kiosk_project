@@ -56,7 +56,6 @@ const server = (0, http_1.createServer)((req, res) => {
         req.on("end", () => {
             try {
                 const payload = JSON.parse(body);
-                console.log("Webhook received:", payload);
                 // Broadcast the payload to all connected WebSocket clients
                 wss.clients.forEach(client => {
                     if (client.readyState === ws_1.default.OPEN) {
@@ -93,8 +92,6 @@ wss.on("connection", (ws, req) => {
         return;
     }
     console.log("Client connected");
-    // Send en velkomstmelding til klienten ved tilkobling
-    ws.send(JSON.stringify({ message: "Welcome!" }));
     ws.on("close", () => {
         console.log("Client disconnected");
     });
