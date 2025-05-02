@@ -5,7 +5,7 @@ export default function TotalProductsSold(props: any) {
         <CardWrapper className="py-12">
             <div className="max-w-3xl w-full mx-auto space-y-32">
                 <h1 className="text-center text-5xl font-bold text-sky-900">
-                    Totalt kjøpt siden 01.01.2025
+                    Totale kjøp siden 01.01.2025
                 </h1>
                 <div className="flex items-center justify-center">
                     <div className="flex items-center space-x-4">
