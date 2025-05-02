@@ -22,6 +22,7 @@ export default function CardWrapper({
             <div className={cn("bg-white rounded-xl border border-gray-300 shadow-sm w-full h-full relative", className)}>
                 <div className="absolute top-2 right-2">
                     <Image
+                        className="rounded"
                         src="/drift-logo.png"
                         alt="Drift logo"
                         width={100}
