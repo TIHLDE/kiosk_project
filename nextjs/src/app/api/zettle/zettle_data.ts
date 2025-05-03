@@ -64,7 +64,7 @@ export function mostBoughtProducts(purchases: Purchase[]): ProductCount[] {
 //   );
 // }
 
-export function numberOfEnergyDrinksBougt(purchases: Purchase[]): number {
+export function numberOfEnergyDrinksBought(purchases: Purchase[]): number {
   return purchases.reduce((acc, purchase) => {
     return (
       acc +
