@@ -28,6 +28,7 @@ jobs:
           echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > ./nextjs/.env.prod
           echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> ./nextjs/.env.prod
           echo 'NEXT_PUBLIC_URL=${{ secrets.NEXT_PUBLIC_URL_PROD }}' >> ./nextjs/.env.prod
+          echo 'PUBLIC_PORT=${{ secrets.PUBLIC_PORT_PROD }}' >> ./nextjs/.env.prod
 
           # Create .env.dev for server
           echo 'PUBLIC_PORT=${{ secrets.PUBLIC_PORT_PROD }}' > ./server/.env.prod

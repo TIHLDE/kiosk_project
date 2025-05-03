@@ -5,7 +5,7 @@ export async function POST(req: any) {
     const event = await req.json();
     
     // Send payload through websocket here
-    const response = await fetch(`http://${process.env.NEXT_PUBLIC_URL}:8002/webhook`, {
+    const response = await fetch(`http://${process.env.NEXT_PUBLIC_URL}:${process.env.PUBLIC_PORT}/webhook`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
