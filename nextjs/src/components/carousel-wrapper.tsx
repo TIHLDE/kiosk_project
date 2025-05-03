@@ -1,6 +1,6 @@
 "use client";
 
-import type { ProductCount } from "../types";
+import type { ProductCount, Purchase } from "../types";
 import { useEffect } from "react";
 import { CarouselContent, useCarousel } from "./motion-primitives/carousel";
 import TopSalesCard from "./display-cards/top-sales";
@@ -9,21 +9,9 @@ import EnergyDrinkCard from "./display-cards/energy-drink";
 import TotalProductsSold from "./display-cards/all-sold";
 import SubwaySurfers from "./display-cards/subway";
 
-
-interface CarouselContentWrapperProps {
-    data: {
-        endDate: Date;
-        startDate: Date;
-        numberOfPurchases: number;
-        averagePayment: number;
-        mostSoldProductsByItems: ProductCount[];
-        numberOfEnergyDrinksSold: number;
-    }
-};
-
 export default function CarouselContentWrapper({
     data
-}: CarouselContentWrapperProps) {
+}: { data: Purchase[] }) {
     const { itemsCount, setIndex } = useCarousel();
 
     useEffect(() => {
