@@ -14,7 +14,7 @@ export async function GET(){
         Authorization: `Bearer ${access_token}`,
       },
       body: JSON.stringify({
-        destination: 'https://kiosken.tihlde.org/api/zettle-webhook', // Your Next.js API route
+        destination: `https://${process.env.NEXT_PUBLIC_URL}/api/zettle-webhook`, // Your Next.js API route
         eventNames: ['PurchaseCreated'], // Adjust based on Zettle event names
         transportName: 'WEBHOOK',
         uuid: uuidv1(),

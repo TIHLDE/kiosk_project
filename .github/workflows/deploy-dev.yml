@@ -25,19 +25,25 @@ jobs:
 
       - name: Create .env file
         run: |
-          echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > .env
-          echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> .env
+          echo 'ZETTLE_CLIENT_SECRET=${{ secrets.ZETTLE_CLIENT_SECRET }}' > ./nextjs/.env.dev
+          echo 'ZETTLE_CLIENT_ID=${{ secrets.ZETTLE_CLIENT_ID }}' >> ./nextjs/.env.dev
+          echo 'NEXT_PUBLIC_URL=${{ secrets.NEXT_PUBLIC_URL_DEV }}' >> ./nextjs/.env.dev
+          echo 'PUBLIC_PORT=${{ secrets.PUBLIC_PORT_DEV }}' >> ./nextjs/.env.dev
+
+          # Create .env.dev for server
+          echo 'PUBLIC_PORT=${{ secrets.PUBLIC_PORT_DEV }}' > ./server/.env.dev
 
       - name: Copy .env to OpenStack server
         run: |
-          scp -v -i ~/.ssh/key .env ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev/nextjs
+          scp -v -i ~/.ssh/key ./nextjs/.env.dev ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev/nextjs/.env
+
+          scp -v -i ~/.ssh/key ./server/.env.dev ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/kiosk_project_dev/server/.env
 
       - name: Deploy frontend + WebSocket server
         run: |
           ssh -v -i ~/.ssh/key ${{ secrets.USER }}@${{ secrets.HOST }} << 'ENDSSH'
-          cd /var/www/kiosk_project_dev/nextjs
-          chmod 0600 .env
-          cd ..
+          cd /var/www/kiosk_project_dev
+          chmod 0600 nextjs/.env server/.env
           git pull -f
           make dev
           ENDSSH

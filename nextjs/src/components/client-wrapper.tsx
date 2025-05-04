@@ -20,7 +20,7 @@ export default function ClientWrapper({
     data
 }) {
     return (
-        <div className="w-screen h-screen overflow-hidden">
+        <div className="w-screen h-screen overflow-hidden cursor-none">
             <Carousel>
                 <CarouselContentWrapper data={data} />
             </Carousel>

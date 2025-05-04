@@ -41,7 +41,7 @@ export default function Home() {
           setShowPaymentSuccess(true);
           setTimeout(() => {
             setShowPaymentSuccess(false);
-          }, 5000);
+          }, 4000);
         }
       };
 
@@ -68,7 +68,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPurchase = async () => {
       try {
-        const response = await fetch('https://kiosken.tihlde.org/api/zettle/purchases', {
+        const response = await fetch(`https://${process.env.NEXT_PUBLIC_URL}/api/zettle/purchases`, {
           method: 'GET',
         });
 
@@ -77,8 +77,6 @@ export default function Home() {
         }
 
         const data = await response.json();
-        console.log(data);
-        console.log(data.data);
         setPurchases(data.data);
       } catch (error) {
         console.error("Error fetching purchases:", error);

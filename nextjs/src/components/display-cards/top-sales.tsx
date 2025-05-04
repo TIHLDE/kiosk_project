@@ -4,17 +4,16 @@ import type { Purchase, ProductCount } from "../../types";
 import CardWrapper from "./wrapper";
 import { Fragment, useEffect, useState } from "react";
 
-export default function TopSalesCard(props: any) {
-    const [allPurchases, setAllPurchases] = useState<Purchase[]>(props.data);
+export default function TopSalesCard({ data }: { data: Purchase[] }) {
     const [products, setProducts] = useState<ProductCount[]>([]);
     
     useEffect(() => {
-        const productCounts = allPurchases.reduce((acc, purchase) => {
-        purchase.products.forEach((product) => {
-            const name = product.name;
-            acc[name] = (acc[name] || 0) + 1;
-        });
-        return acc;
+        const productCounts = data.reduce((acc, purchase) => {
+            purchase.products.forEach((product) => {
+                const name = product.name;
+                acc[name] = (acc[name] || 0) + 1;
+            });
+            return acc;
         }, {} as Record<string, number>);
     
         // Convert the object to an array of [productName, count] pairs
@@ -24,7 +23,7 @@ export default function TopSalesCard(props: any) {
         productArray.sort((a, b) => b[1] - a[1]);
     
         setProducts(productArray.map(([name, quantity]) => ({ name, quantity } as ProductCount)));
-    }, [allPurchases]);
+    }, [data]);
 
     return (
         <CardWrapper className="flex items-center justify-center">

@@ -1,28 +1,17 @@
 "use client";
 
-import type { ProductCount } from "../types";
+import type { ProductCount, Purchase } from "../types";
 import { useEffect } from "react";
 import { CarouselContent, useCarousel } from "./motion-primitives/carousel";
 import TopSalesCard from "./display-cards/top-sales";
 import AverageSpentCard from "./display-cards/average-spent";
 import EnergyDrinkCard from "./display-cards/energy-drink";
 import TotalProductsSold from "./display-cards/all-sold";
-
-
-interface CarouselContentWrapperProps {
-    data: {
-        endDate: Date;
-        startDate: Date;
-        numberOfPurchases: number;
-        averagePayment: number;
-        mostSoldProductsByItems: ProductCount[];
-        numberOfEnergyDrinksSold: number;
-    }
-};
+import SubwaySurfers from "./display-cards/subway";
 
 export default function CarouselContentWrapper({
     data
-}: CarouselContentWrapperProps) {
+}: { data: Purchase[] }) {
     const { itemsCount, setIndex } = useCarousel();
 
     useEffect(() => {
@@ -44,8 +33,8 @@ export default function CarouselContentWrapper({
         <CarouselContent>
             <TotalProductsSold data={data}/>
             <TopSalesCard data={data} />
-            {/* <AverageSpentCard averageSpent={data.averagePayment} />
-            <EnergyDrinkCard energyDrinks={data.numberOfEnergyDrinksSold} /> */}
+            
+            <SubwaySurfers/>
         </CarouselContent>
     );
 };

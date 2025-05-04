@@ -33,10 +33,15 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+
+require("dotenv").config();
+
 const http_1 = require("http");
 const ws_1 = __importStar(require("ws"));
+
 // Velg hvilken port du vil bruke
-const PORT = 8002;
+const PORT = process.env.PUBLIC_PORT;
+
 // Lag en enkel HTTP server med node sitt innebygde http-modul
 const server = (0, http_1.createServer)((req, res) => {
     // Sjekk om forespørselen er til "/webhook" og metoden er POST
@@ -51,7 +56,6 @@ const server = (0, http_1.createServer)((req, res) => {
         req.on("end", () => {
             try {
                 const payload = JSON.parse(body);
-                console.log("Webhook received:", payload);
                 // Broadcast the payload to all connected WebSocket clients
                 wss.clients.forEach(client => {
                     if (client.readyState === ws_1.default.OPEN) {
@@ -88,8 +92,6 @@ wss.on("connection", (ws, req) => {
         return;
     }
     console.log("Client connected");
-    // Send en velkomstmelding til klienten ved tilkobling
-    ws.send(JSON.stringify({ message: "Welcome!" }));
     ws.on("close", () => {
         console.log("Client disconnected");
     });
