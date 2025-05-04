@@ -97,7 +97,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative bg-gray-50 flex items-center justify-center h-screen w-full">
+    <div className="relative bg-gray-50 flex items-center justify-center h-screen w-full cursor-none">
       {/* Show PaymentSuccessful component when showPaymentSuccess is true */}
       {showPaymentSuccess && (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
