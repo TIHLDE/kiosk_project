@@ -2,6 +2,8 @@ import SubwaySurfers from "../../components/display-cards/subway";
 
 export default function Home(){
   return(
-    <SubwaySurfers/>
+    <div className="">
+      <SubwaySurfers/>
+    </div>
   );
 }

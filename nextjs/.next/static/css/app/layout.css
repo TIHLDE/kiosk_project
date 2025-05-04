@@ -688,6 +688,9 @@ font-weight: 100 900;
   .cursor-grab {
     cursor: grab;
   }
+  .cursor-none {
+    cursor: none;
+  }
   .touch-pinch-zoom {
     --tw-pinch-zoom: pinch-zoom;
     touch-action: var(--tw-pan-x,) var(--tw-pan-y,) var(--tw-pinch-zoom,);
