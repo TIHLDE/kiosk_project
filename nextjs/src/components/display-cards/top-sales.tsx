@@ -23,7 +23,7 @@ export default function TopSalesCard({ data }: { data: Purchase[] }) {
         productArray.sort((a, b) => b[1] - a[1]);
     
         setProducts(productArray.map(([name, quantity]) => ({ name, quantity } as ProductCount)));
-    }, [data]);
+    }, []);
 
     return (
         <CardWrapper className="flex items-center justify-center">
