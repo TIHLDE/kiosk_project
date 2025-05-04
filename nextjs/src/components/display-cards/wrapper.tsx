@@ -17,7 +17,7 @@ export default function CardWrapper({
 }: CardWrapperProps) {
     return (
         <CarouselItem
-            className="w-screen h-screen p-6"
+            className="w-screen h-screen p-6 cursor-none"
         >
             <div className={cn("bg-white rounded-xl border border-gray-300 shadow-sm w-full h-full relative", className)}>
                 <div className="absolute top-2 right-2">
