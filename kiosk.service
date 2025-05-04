@@ -1,0 +1,13 @@
+[Unit]
+Description=Launch Chromium in kiosk mode
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=pikiosk
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+ExecStart=/usr/bin/chromium-browser --start-fullscreen https://kiosken.tihlde.org
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
