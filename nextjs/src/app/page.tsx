@@ -35,7 +35,9 @@ export default function Home() {
         if (event.data === "pong") {
           console.log("Pong received, connection is alive");
         } else {
+          console.log(purchases[-1])
           setPurchases((prevPurchases) => [...prevPurchases, event.data]);
+          
 
           // Show the PaymentSuccessful component for 5 seconds
           setShowPaymentSuccess(true);
