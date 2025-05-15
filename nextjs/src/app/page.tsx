@@ -67,6 +67,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    console.log("Purchases: ", purchases);
+  }, [purchases])
+
+  useEffect(() => {
     const fetchPurchase = async () => {
       try {
         const response = await fetch(`https://${process.env.NEXT_PUBLIC_URL}/api/zettle/purchases`, {
