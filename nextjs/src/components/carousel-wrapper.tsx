@@ -24,7 +24,7 @@ export default function CarouselContentWrapper({
                 const newIndex = prevIndex + 1;
                 return newIndex;
             });
-        }, 10000); // Change slide every 2 seconds
+        }, 10000); // Change slide every 10 seconds
 
         return () => clearInterval(interval); // Cleanup interval on unmount
     }, [itemsCount, setIndex]);
