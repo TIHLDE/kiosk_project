@@ -2,10 +2,7 @@
 
 import ClientWrapper from "../components/client-wrapper";
 import PaymentSuccessful from "../components/display-cards/payment-successful";
-import { Purchase } from "../types";
 import ReloadComponent from "./reload-component";
-import { getAccessToken } from "./server/token";
-import { getPurchaseStats, fetchPurchases } from "./server/zettle";
 import React, { useState, useEffect } from "react";
 
 export default function Home() {
@@ -36,9 +33,9 @@ export default function Home() {
         if (event.data === "pong") {
           console.log("Pong received, connection is alive");
         } else {
+          const parsedData = JSON.parse(event.data);
           console.log("Purchases: ", purchases);
-          console.log("Purchases.data[0]: ", purchases.data[0]);
-          setPurchases((prevPurchases: any) => [...prevPurchases, event.data]);
+          setPurchases((prevPurchases: any) => [...prevPurchases, parsedData]);
           
 
           // Show the PaymentSuccessful component for 5 seconds
