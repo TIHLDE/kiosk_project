@@ -2,7 +2,6 @@
 
 import ClientWrapper from "../components/client-wrapper";
 import PaymentSuccessful from "../components/display-cards/payment-successful";
-import CardWrapper from "../components/display-cards/wrapper";
 import ReloadComponent from "./reload-component";
 import { getAccessToken } from "./server/token";
 import { getPurchaseStats, fetchPurchases } from "./server/zettle";
@@ -99,19 +98,17 @@ export default function Home() {
   }
 
   return (
-    <CardWrapper>
-      <div className="relative bg-gray-50 flex items-center justify-center h-screen w-full">
-        {/* Show PaymentSuccessful component when showPaymentSuccess is true */}
-        {showPaymentSuccess && (
-          <div className="absolute inset-0 z-50 flex items-center justify-center bg-opacity-50">
-            <PaymentSuccessful />
-          </div>
-        )}
+    <div className="relative bg-gray-50 flex items-center justify-center h-screen w-full">
+      {/* Show PaymentSuccessful component when showPaymentSuccess is true */}
+      {showPaymentSuccess && (
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-opacity-50">
+          <PaymentSuccessful />
+        </div>
+      )}
 
-        {/* Main content */}
-        <ReloadComponent />
-        <ClientWrapper data={purchases} />
-      </div>
-    </CardWrapper>
+      {/* Main content */}
+      <ReloadComponent />
+      <ClientWrapper data={purchases} />
+    </div>
   );
 }
