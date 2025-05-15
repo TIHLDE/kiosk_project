@@ -11,7 +11,7 @@ export default function PaymentSuccessful() {
           <h1 className="text-4xl font-bold text-center sm:text-5xl sm:text-middle pt-4">
             Betaling vellykket
           </h1>
-          <div className="Image">
+          <div className="flex justify-center items-center h-full w-full">
             <Image
               src="/check_mark.svg"
               alt="check_mark_logo"
