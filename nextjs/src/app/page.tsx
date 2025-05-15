@@ -77,6 +77,7 @@ export default function Home() {
         }
 
         const data = await response.json();
+        console.log(data.data[0]);
         setPurchases(data.data);
       } catch (error) {
         console.error("Error fetching purchases:", error);
@@ -100,7 +101,7 @@ export default function Home() {
     <div className="relative bg-gray-50 flex items-center justify-center h-screen w-full">
       {/* Show PaymentSuccessful component when showPaymentSuccess is true */}
       {showPaymentSuccess && (
-        <div className="absolute inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="absolute inset-0 z-50 flex items-center justify-center bg-opacity-50">
           <PaymentSuccessful />
         </div>
       )}
