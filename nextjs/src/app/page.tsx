@@ -9,7 +9,7 @@ import { getPurchaseStats, fetchPurchases } from "./server/zettle";
 import React, { useState, useEffect } from "react";
 
 export default function Home() {
-  const [purchases, setPurchases] = useState<Purchase[]>([]);
+  const [purchases, setPurchases] = useState<any>([]);
   const [loading, setLoading] = useState(true); // Add loading state
   const [showPaymentSuccess, setShowPaymentSuccess] = useState(false); // State to control visibility of PaymentSuccessful
   let pingInterval: NodeJS.Timeout;
@@ -36,8 +36,9 @@ export default function Home() {
         if (event.data === "pong") {
           console.log("Pong received, connection is alive");
         } else {
-          console.log(purchases[0])
-          setPurchases((prevPurchases) => [...prevPurchases, event.data]);
+          console.log("Purchases: ", purchases);
+          console.log("Purchases.data[0]: ", purchases.data[0]);
+          setPurchases((prevPurchases: any) => [...prevPurchases, event.data]);
           
 
           // Show the PaymentSuccessful component for 5 seconds
@@ -80,7 +81,7 @@ export default function Home() {
         }
 
         const data = await response.json();
-        console.log(data.data[0]);
+        console.log("From fetch, data.data[0]: ", data.data[0]);
         setPurchases(data.data);
       } catch (error) {
         console.error("Error fetching purchases:", error);
