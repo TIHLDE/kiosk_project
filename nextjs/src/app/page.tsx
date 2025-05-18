@@ -34,11 +34,9 @@ export default function Home() {
           console.log("Pong received, connection is alive");
         } else {
           const parsedData = JSON.parse(event.data);
-          console.log("Purchases: ", purchases);
           setPurchases((prevPurchases: any) => [...prevPurchases, parsedData]);
           
-
-          // Show the PaymentSuccessful component for 5 seconds
+          // Show the PaymentSuccessful component for 4 seconds
           setShowPaymentSuccess(true);
           setTimeout(() => {
             setShowPaymentSuccess(false);
