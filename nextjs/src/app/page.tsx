@@ -80,7 +80,7 @@ export default function Home() {
         if(window.location.hostname == "localhost"){
           url = "/api/zettle/purchases/local"
         } else {
-          url = `${window.location.hostname}/api/zettle/purchases`
+          url = `/api/zettle/purchases`
         }
 
         const response = await fetch(`${url}`, {
