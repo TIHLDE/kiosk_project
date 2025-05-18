@@ -1,11 +1,9 @@
-import { Purchase } from "../../../types";
-
 export async function POST(req: any) {
   try {
     const event = await req.json();
     
     // Send payload through websocket here
-    const response = await fetch(`http://${process.env.NEXT_PUBLIC_URL}:${process.env.PUBLIC_PORT}/webhook`, {
+    const response = await fetch(`http://${process.env.WEBHOOK_URL}/webhook`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

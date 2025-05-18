@@ -1,5 +1,17 @@
 {
-  "node": {},
+  "node": {
+    "00614939e932edeb4adfe79260f218e1413f08ff21": {
+      "workers": {
+        "app/api/zettle/purchases/local/route": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fmateo%2FDocuments%2FGit%2Fkiost_project%2Fnextjs%2Fsrc%2Fapp%2Fapi%2Fzettle%2Fpurchases%2Flocal%2Froute.ts%22%2C%5B%7B%22id%22%3A%2200614939e932edeb4adfe79260f218e1413f08ff21%22%2C%22exportedName%22%3A%22GET%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/api/zettle/purchases/local/route": "rsc"
+      }
+    }
+  },
   "edge": {},
   "encryptionKey": "GL/4qKl5dr5iwHRGNniwkhlY8PD2xZZT4JihejIQ/EI="
 }

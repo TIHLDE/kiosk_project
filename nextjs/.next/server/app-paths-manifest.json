@@ -1,3 +1,6 @@
 {
-  "/testpage/page": "app/testpage/page.js"
+  "/api/zettle/purchases/local/route": "app/api/zettle/purchases/local/route.js",
+  "/api/zettle-webhook/route": "app/api/zettle-webhook/route.js",
+  "/testpage/page": "app/testpage/page.js",
+  "/page": "app/page.js"
 }

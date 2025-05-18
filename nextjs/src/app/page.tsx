@@ -14,7 +14,12 @@ export default function Home() {
   useEffect(() => {
     const connectWebSocket = () => {
       const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
-      const socketUrl = `${protocol}://${window.location.hostname}/ws?password=your-secure-password`;
+      let socketUrl: string;
+      if(window.location.hostname == "localhost"){
+        socketUrl = `${protocol}://${window.location.hostname}:8001?password=your-secure-password`
+      } else {
+        socketUrl = `${protocol}://${window.location.hostname}/ws?password=your-secure-password`
+      }
       const ws = new WebSocket(socketUrl);
 
       ws.onopen = () => {
@@ -71,7 +76,14 @@ export default function Home() {
   useEffect(() => {
     const fetchPurchase = async () => {
       try {
-        const response = await fetch(`https://${process.env.NEXT_PUBLIC_URL}/api/zettle/purchases`, {
+        let url;
+        if(window.location.hostname == "localhost"){
+          url = "/api/zettle/purchases/local"
+        } else {
+          url = `${window.location.hostname}/api/zettle/purchases`
+        }
+
+        const response = await fetch(`${url}`, {
           method: 'GET',
         });
 
