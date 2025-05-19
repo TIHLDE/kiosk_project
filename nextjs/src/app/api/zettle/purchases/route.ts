@@ -2,7 +2,6 @@
 
 import { getAccessToken } from "../../../server/token";
 import { fetchPurchases } from "../../../server/zettle";
-import { Purchase } from "../../../../types";
 
 export async function GET(){
   const accessToken = await getAccessToken();
