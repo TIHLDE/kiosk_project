@@ -12,7 +12,7 @@ export async function GET(){
 
   let endDate = new Date();
   let startDate = new Date(endDate.valueOf() - 10 * 24 * 60 * 60 * 1000);
-  const targetDate = new Date(2025, 0, 1);
+  const targetDate = new Date(2024, 0, 1);
 
   const promises: Promise<any>[] = [];
 
