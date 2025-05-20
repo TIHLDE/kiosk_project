@@ -3,12 +3,15 @@
 import type { Purchase, ProductCount } from "../../types";
 import CardWrapper from "./wrapper";
 import { Fragment, useEffect, useState } from "react";
+import { filterPurchasesTo2025 } from "../../lib/utils";
 
 export default function TopSalesCard({ data }: { data: Purchase[] }) {
     const [products, setProducts] = useState<ProductCount[]>([]);
     
     useEffect(() => {
-        const productCounts = data.reduce((acc, purchase) => {
+        const filteredData = filterPurchasesTo2025(data);
+
+        const productCounts = filteredData.reduce((acc, purchase) => {
             purchase.products.forEach((product) => {
                 const name = product.name;
                 acc[name] = (acc[name] || 0) + 1;

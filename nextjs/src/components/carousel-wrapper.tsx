@@ -8,6 +8,7 @@ import AverageSpentCard from "./display-cards/average-spent";
 import EnergyDrinkCard from "./display-cards/energy-drink";
 import TotalProductsSold from "./display-cards/all-sold";
 import SubwaySurfers from "./display-cards/subway";
+import EnergyDrinkGraph from "./display-cards/energy-drink-graph";
 
 export default function CarouselContentWrapper({
     data
@@ -24,7 +25,7 @@ export default function CarouselContentWrapper({
                 const newIndex = prevIndex + 1;
                 return newIndex;
             });
-        }, 10000); // Change slide every 10 seconds
+        }, 100000); // Change slide every 10 seconds
 
         return () => clearInterval(interval); // Cleanup interval on unmount
     }, [itemsCount, setIndex]);
@@ -33,8 +34,8 @@ export default function CarouselContentWrapper({
         <CarouselContent>
             <TotalProductsSold data={data}/>
             <TopSalesCard data={data} />
-            
-            <SubwaySurfers/>
+            <EnergyDrinkGraph data={data}/>
+            {/* <SubwaySurfers/> */}
         </CarouselContent>
     );
 };
