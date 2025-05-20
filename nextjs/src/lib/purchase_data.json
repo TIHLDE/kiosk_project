@@ -7,7 +7,7 @@
     "country": "GB",
     "amount": 2400,
     "vatAmount": 267,
-    "timestamp": 1747585948942,
+    "timestamp": "2025-05-18T16:32:28.942+0000",
     "created": "2025-05-18T16:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -68,7 +68,7 @@
     "country": "GB",
     "amount": 6200,
     "vatAmount": 591,
-    "timestamp": 1747585648942,
+    "timestamp": "2025-05-18T16:27:28.942+0000",
     "created": "2025-05-18T16:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -173,7 +173,7 @@
     "country": "GB",
     "amount": 5400,
     "vatAmount": 556,
-    "timestamp": 1747585348942,
+    "timestamp": "2025-05-18T16:22:28.942+0000",
     "created": "2025-05-18T16:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -278,7 +278,7 @@
     "country": "GB",
     "amount": 1800,
     "vatAmount": 102,
-    "timestamp": 1747585048942,
+    "timestamp": "2025-05-18T16:17:28.942+0000",
     "created": "2025-05-18T16:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -339,7 +339,7 @@
     "country": "GB",
     "amount": 1500,
     "vatAmount": 167,
-    "timestamp": 1747584748942,
+    "timestamp": "2025-05-18T16:12:28.942+0000",
     "created": "2025-05-18T16:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -400,7 +400,7 @@
     "country": "GB",
     "amount": 3000,
     "vatAmount": 170,
-    "timestamp": 1747584448942,
+    "timestamp": "2025-05-18T16:07:28.942+0000",
     "created": "2025-05-18T16:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -461,7 +461,7 @@
     "country": "GB",
     "amount": 9900,
     "vatAmount": 822,
-    "timestamp": 1747584148942,
+    "timestamp": "2025-05-18T16:02:28.942+0000",
     "created": "2025-05-18T16:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -566,7 +566,7 @@
     "country": "GB",
     "amount": 6600,
     "vatAmount": 619,
-    "timestamp": 1747583848942,
+    "timestamp": "2025-05-18T15:57:28.942+0000",
     "created": "2025-05-18T15:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -671,7 +671,7 @@
     "country": "GB",
     "amount": 3300,
     "vatAmount": 187,
-    "timestamp": 1747583548942,
+    "timestamp": "2025-05-18T15:52:28.942+0000",
     "created": "2025-05-18T15:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -732,7 +732,7 @@
     "country": "GB",
     "amount": 9000,
     "vatAmount": 869,
-    "timestamp": 1747583248942,
+    "timestamp": "2025-05-18T15:47:28.942+0000",
     "created": "2025-05-18T15:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -837,7 +837,7 @@
     "country": "GB",
     "amount": 7600,
     "vatAmount": 675,
-    "timestamp": 1747582948942,
+    "timestamp": "2025-05-18T15:42:28.942+0000",
     "created": "2025-05-18T15:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -942,7 +942,7 @@
     "country": "GB",
     "amount": 7200,
     "vatAmount": 653,
-    "timestamp": 1747582648942,
+    "timestamp": "2025-05-18T15:37:28.942+0000",
     "created": "2025-05-18T15:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1025,7 +1025,7 @@
     "country": "GB",
     "amount": 800,
     "vatAmount": 45,
-    "timestamp": 1747582348942,
+    "timestamp": "2025-05-18T15:32:28.942+0000",
     "created": "2025-05-18T15:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1086,7 +1086,7 @@
     "country": "GB",
     "amount": 3700,
     "vatAmount": 209,
-    "timestamp": 1747582048942,
+    "timestamp": "2025-05-18T15:27:28.942+0000",
     "created": "2025-05-18T15:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1169,7 +1169,7 @@
     "country": "GB",
     "amount": 2700,
     "vatAmount": 153,
-    "timestamp": 1747581748942,
+    "timestamp": "2025-05-18T15:22:28.942+0000",
     "created": "2025-05-18T15:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1230,7 +1230,7 @@
     "country": "GB",
     "amount": 1600,
     "vatAmount": 91,
-    "timestamp": 1747581448942,
+    "timestamp": "2025-05-18T15:17:28.942+0000",
     "created": "2025-05-18T15:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1291,7 +1291,7 @@
     "country": "GB",
     "amount": 4200,
     "vatAmount": 238,
-    "timestamp": 1747581148942,
+    "timestamp": "2025-05-18T15:12:28.942+0000",
     "created": "2025-05-18T15:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1374,7 +1374,7 @@
     "country": "GB",
     "amount": 8600,
     "vatAmount": 661,
-    "timestamp": 1747580848942,
+    "timestamp": "2025-05-18T15:07:28.942+0000",
     "created": "2025-05-18T15:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1479,7 +1479,7 @@
     "country": "GB",
     "amount": 1000,
     "vatAmount": 57,
-    "timestamp": 1747580548942,
+    "timestamp": "2025-05-18T15:02:28.942+0000",
     "created": "2025-05-18T15:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1540,7 +1540,7 @@
     "country": "GB",
     "amount": 5200,
     "vatAmount": 294,
-    "timestamp": 1747580248942,
+    "timestamp": "2025-05-18T14:57:28.942+0000",
     "created": "2025-05-18T14:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1645,7 +1645,7 @@
     "country": "GB",
     "amount": 3600,
     "vatAmount": 291,
-    "timestamp": 1747579948942,
+    "timestamp": "2025-05-18T14:52:28.942+0000",
     "created": "2025-05-18T14:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1728,7 +1728,7 @@
     "country": "GB",
     "amount": 6800,
     "vatAmount": 625,
-    "timestamp": 1747579648942,
+    "timestamp": "2025-05-18T14:47:28.942+0000",
     "created": "2025-05-18T14:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1833,7 +1833,7 @@
     "country": "GB",
     "amount": 3600,
     "vatAmount": 400,
-    "timestamp": 1747579348942,
+    "timestamp": "2025-05-18T14:42:28.942+0000",
     "created": "2025-05-18T14:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1894,7 +1894,7 @@
     "country": "GB",
     "amount": 1500,
     "vatAmount": 167,
-    "timestamp": 1747579048942,
+    "timestamp": "2025-05-18T14:37:28.942+0000",
     "created": "2025-05-18T14:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -1955,7 +1955,7 @@
     "country": "GB",
     "amount": 6700,
     "vatAmount": 625,
-    "timestamp": 1747578748942,
+    "timestamp": "2025-05-18T14:32:28.942+0000",
     "created": "2025-05-18T14:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2038,7 +2038,7 @@
     "country": "GB",
     "amount": 4800,
     "vatAmount": 533,
-    "timestamp": 1747578448942,
+    "timestamp": "2025-05-18T14:27:28.942+0000",
     "created": "2025-05-18T14:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2099,7 +2099,7 @@
     "country": "GB",
     "amount": 4600,
     "vatAmount": 391,
-    "timestamp": 1747578148942,
+    "timestamp": "2025-05-18T14:22:28.942+0000",
     "created": "2025-05-18T14:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2182,7 +2182,7 @@
     "country": "GB",
     "amount": 4500,
     "vatAmount": 500,
-    "timestamp": 1747577848942,
+    "timestamp": "2025-05-18T14:17:28.942+0000",
     "created": "2025-05-18T14:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2243,7 +2243,7 @@
     "country": "GB",
     "amount": 7700,
     "vatAmount": 692,
-    "timestamp": 1747577548942,
+    "timestamp": "2025-05-18T14:12:28.942+0000",
     "created": "2025-05-18T14:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2348,7 +2348,7 @@
     "country": "GB",
     "amount": 10200,
     "vatAmount": 1003,
-    "timestamp": 1747577248942,
+    "timestamp": "2025-05-18T14:07:28.942+0000",
     "created": "2025-05-18T14:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2453,7 +2453,7 @@
     "country": "GB",
     "amount": 1200,
     "vatAmount": 133,
-    "timestamp": 1747576948942,
+    "timestamp": "2025-05-18T14:02:28.942+0000",
     "created": "2025-05-18T14:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2514,7 +2514,7 @@
     "country": "GB",
     "amount": 10200,
     "vatAmount": 1084,
-    "timestamp": 1747576648942,
+    "timestamp": "2025-05-18T13:57:28.942+0000",
     "created": "2025-05-18T13:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2619,7 +2619,7 @@
     "country": "GB",
     "amount": 7100,
     "vatAmount": 745,
-    "timestamp": 1747576348942,
+    "timestamp": "2025-05-18T13:52:28.942+0000",
     "created": "2025-05-18T13:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2724,7 +2724,7 @@
     "country": "GB",
     "amount": 1600,
     "vatAmount": 178,
-    "timestamp": 1747576048942,
+    "timestamp": "2025-05-18T13:47:28.942+0000",
     "created": "2025-05-18T13:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2785,7 +2785,7 @@
     "country": "GB",
     "amount": 8500,
     "vatAmount": 857,
-    "timestamp": 1747575748942,
+    "timestamp": "2025-05-18T13:42:28.942+0000",
     "created": "2025-05-18T13:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2890,7 +2890,7 @@
     "country": "GB",
     "amount": 10100,
     "vatAmount": 1013,
-    "timestamp": 1747575448942,
+    "timestamp": "2025-05-18T13:37:28.942+0000",
     "created": "2025-05-18T13:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -2995,7 +2995,7 @@
     "country": "GB",
     "amount": 6800,
     "vatAmount": 385,
-    "timestamp": 1747575148942,
+    "timestamp": "2025-05-18T13:32:28.942+0000",
     "created": "2025-05-18T13:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3100,7 +3100,7 @@
     "country": "GB",
     "amount": 7800,
     "vatAmount": 638,
-    "timestamp": 1747574848942,
+    "timestamp": "2025-05-18T13:27:28.942+0000",
     "created": "2025-05-18T13:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3205,7 +3205,7 @@
     "country": "GB",
     "amount": 6600,
     "vatAmount": 635,
-    "timestamp": 1747574548942,
+    "timestamp": "2025-05-18T13:22:28.942+0000",
     "created": "2025-05-18T13:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3288,7 +3288,7 @@
     "country": "GB",
     "amount": 3600,
     "vatAmount": 400,
-    "timestamp": 1747574248942,
+    "timestamp": "2025-05-18T13:17:28.942+0000",
     "created": "2025-05-18T13:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3349,7 +3349,7 @@
     "country": "GB",
     "amount": 5100,
     "vatAmount": 463,
-    "timestamp": 1747573948942,
+    "timestamp": "2025-05-18T13:12:28.942+0000",
     "created": "2025-05-18T13:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3454,7 +3454,7 @@
     "country": "GB",
     "amount": 5700,
     "vatAmount": 323,
-    "timestamp": 1747573648942,
+    "timestamp": "2025-05-18T13:07:28.942+0000",
     "created": "2025-05-18T13:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3537,7 +3537,7 @@
     "country": "GB",
     "amount": 6100,
     "vatAmount": 591,
-    "timestamp": 1747573348942,
+    "timestamp": "2025-05-18T13:02:28.942+0000",
     "created": "2025-05-18T13:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3620,7 +3620,7 @@
     "country": "GB",
     "amount": 2700,
     "vatAmount": 153,
-    "timestamp": 1747573048942,
+    "timestamp": "2025-05-18T12:57:28.942+0000",
     "created": "2025-05-18T12:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3681,7 +3681,7 @@
     "country": "GB",
     "amount": 6500,
     "vatAmount": 455,
-    "timestamp": 1747572748942,
+    "timestamp": "2025-05-18T12:52:28.942+0000",
     "created": "2025-05-18T12:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3786,7 +3786,7 @@
     "country": "GB",
     "amount": 6300,
     "vatAmount": 357,
-    "timestamp": 1747572448942,
+    "timestamp": "2025-05-18T12:47:28.942+0000",
     "created": "2025-05-18T12:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3869,7 +3869,7 @@
     "country": "GB",
     "amount": 7300,
     "vatAmount": 577,
-    "timestamp": 1747572148942,
+    "timestamp": "2025-05-18T12:42:28.942+0000",
     "created": "2025-05-18T12:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -3974,7 +3974,7 @@
     "country": "GB",
     "amount": 3100,
     "vatAmount": 344,
-    "timestamp": 1747571848942,
+    "timestamp": "2025-05-18T12:37:28.942+0000",
     "created": "2025-05-18T12:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4057,7 +4057,7 @@
     "country": "GB",
     "amount": 9000,
     "vatAmount": 836,
-    "timestamp": 1747571548942,
+    "timestamp": "2025-05-18T12:32:28.942+0000",
     "created": "2025-05-18T12:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4162,7 +4162,7 @@
     "country": "GB",
     "amount": 5700,
     "vatAmount": 453,
-    "timestamp": 1747571248942,
+    "timestamp": "2025-05-18T12:27:28.942+0000",
     "created": "2025-05-18T12:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4245,7 +4245,7 @@
     "country": "GB",
     "amount": 800,
     "vatAmount": 45,
-    "timestamp": 1747570948942,
+    "timestamp": "2025-05-18T12:22:28.942+0000",
     "created": "2025-05-18T12:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4306,7 +4306,7 @@
     "country": "GB",
     "amount": 3600,
     "vatAmount": 400,
-    "timestamp": 1747570648942,
+    "timestamp": "2025-05-18T12:17:28.942+0000",
     "created": "2025-05-18T12:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4367,7 +4367,7 @@
     "country": "GB",
     "amount": 6300,
     "vatAmount": 553,
-    "timestamp": 1747570348942,
+    "timestamp": "2025-05-18T12:12:28.942+0000",
     "created": "2025-05-18T12:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4450,7 +4450,7 @@
     "country": "GB",
     "amount": 4600,
     "vatAmount": 260,
-    "timestamp": 1747570048942,
+    "timestamp": "2025-05-18T12:07:28.942+0000",
     "created": "2025-05-18T12:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4533,7 +4533,7 @@
     "country": "GB",
     "amount": 2200,
     "vatAmount": 125,
-    "timestamp": 1747569748942,
+    "timestamp": "2025-05-18T12:02:28.942+0000",
     "created": "2025-05-18T12:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4594,7 +4594,7 @@
     "country": "GB",
     "amount": 800,
     "vatAmount": 45,
-    "timestamp": 1747569448942,
+    "timestamp": "2025-05-18T11:57:28.942+0000",
     "created": "2025-05-18T11:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4655,7 +4655,7 @@
     "country": "GB",
     "amount": 7600,
     "vatAmount": 561,
-    "timestamp": 1747569148942,
+    "timestamp": "2025-05-18T11:52:28.942+0000",
     "created": "2025-05-18T11:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4760,7 +4760,7 @@
     "country": "GB",
     "amount": 5400,
     "vatAmount": 371,
-    "timestamp": 1747568848942,
+    "timestamp": "2025-05-18T11:47:28.942+0000",
     "created": "2025-05-18T11:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4865,7 +4865,7 @@
     "country": "GB",
     "amount": 6500,
     "vatAmount": 542,
-    "timestamp": 1747568548942,
+    "timestamp": "2025-05-18T11:42:28.942+0000",
     "created": "2025-05-18T11:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -4948,7 +4948,7 @@
     "country": "GB",
     "amount": 800,
     "vatAmount": 45,
-    "timestamp": 1747568248942,
+    "timestamp": "2025-05-18T11:37:28.942+0000",
     "created": "2025-05-18T11:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5009,7 +5009,7 @@
     "country": "GB",
     "amount": 5000,
     "vatAmount": 414,
-    "timestamp": 1747567948942,
+    "timestamp": "2025-05-18T11:32:28.942+0000",
     "created": "2025-05-18T11:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5114,7 +5114,7 @@
     "country": "GB",
     "amount": 2800,
     "vatAmount": 224,
-    "timestamp": 1747567648942,
+    "timestamp": "2025-05-18T11:27:28.942+0000",
     "created": "2025-05-18T11:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5197,7 +5197,7 @@
     "country": "GB",
     "amount": 8800,
     "vatAmount": 923,
-    "timestamp": 1747567348942,
+    "timestamp": "2025-05-18T11:22:28.942+0000",
     "created": "2025-05-18T11:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5302,7 +5302,7 @@
     "country": "GB",
     "amount": 3600,
     "vatAmount": 400,
-    "timestamp": 1747567048942,
+    "timestamp": "2025-05-18T11:17:28.942+0000",
     "created": "2025-05-18T11:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5363,7 +5363,7 @@
     "country": "GB",
     "amount": 3300,
     "vatAmount": 269,
-    "timestamp": 1747566748942,
+    "timestamp": "2025-05-18T11:12:28.942+0000",
     "created": "2025-05-18T11:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5446,7 +5446,7 @@
     "country": "GB",
     "amount": 2400,
     "vatAmount": 136,
-    "timestamp": 1747566448942,
+    "timestamp": "2025-05-18T11:07:28.942+0000",
     "created": "2025-05-18T11:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5507,7 +5507,7 @@
     "country": "GB",
     "amount": 5000,
     "vatAmount": 457,
-    "timestamp": 1747566148942,
+    "timestamp": "2025-05-18T11:02:28.942+0000",
     "created": "2025-05-18T11:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5590,7 +5590,7 @@
     "country": "GB",
     "amount": 5200,
     "vatAmount": 294,
-    "timestamp": 1747565848942,
+    "timestamp": "2025-05-18T10:57:28.942+0000",
     "created": "2025-05-18T10:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5673,7 +5673,7 @@
     "country": "GB",
     "amount": 3600,
     "vatAmount": 291,
-    "timestamp": 1747565548942,
+    "timestamp": "2025-05-18T10:52:28.942+0000",
     "created": "2025-05-18T10:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5756,7 +5756,7 @@
     "country": "GB",
     "amount": 4800,
     "vatAmount": 533,
-    "timestamp": 1747565248942,
+    "timestamp": "2025-05-18T10:47:28.942+0000",
     "created": "2025-05-18T10:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5817,7 +5817,7 @@
     "country": "GB",
     "amount": 1500,
     "vatAmount": 167,
-    "timestamp": 1747564948942,
+    "timestamp": "2025-05-18T10:42:28.942+0000",
     "created": "2025-05-18T10:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5878,7 +5878,7 @@
     "country": "GB",
     "amount": 6300,
     "vatAmount": 357,
-    "timestamp": 1747564648942,
+    "timestamp": "2025-05-18T10:37:28.942+0000",
     "created": "2025-05-18T10:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -5983,7 +5983,7 @@
     "country": "GB",
     "amount": 1600,
     "vatAmount": 178,
-    "timestamp": 1747564348942,
+    "timestamp": "2025-05-18T10:32:28.942+0000",
     "created": "2025-05-18T10:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6044,7 +6044,7 @@
     "country": "GB",
     "amount": 3300,
     "vatAmount": 187,
-    "timestamp": 1747564048942,
+    "timestamp": "2025-05-18T10:27:28.942+0000",
     "created": "2025-05-18T10:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6105,7 +6105,7 @@
     "country": "GB",
     "amount": 4600,
     "vatAmount": 391,
-    "timestamp": 1747563748942,
+    "timestamp": "2025-05-18T10:22:28.942+0000",
     "created": "2025-05-18T10:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6188,7 +6188,7 @@
     "country": "GB",
     "amount": 6800,
     "vatAmount": 385,
-    "timestamp": 1747563448942,
+    "timestamp": "2025-05-18T10:17:28.942+0000",
     "created": "2025-05-18T10:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6293,7 +6293,7 @@
     "country": "GB",
     "amount": 3400,
     "vatAmount": 258,
-    "timestamp": 1747563148942,
+    "timestamp": "2025-05-18T10:12:28.942+0000",
     "created": "2025-05-18T10:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6376,7 +6376,7 @@
     "country": "GB",
     "amount": 6100,
     "vatAmount": 623,
-    "timestamp": 1747562848942,
+    "timestamp": "2025-05-18T10:07:28.942+0000",
     "created": "2025-05-18T10:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6481,7 +6481,7 @@
     "country": "GB",
     "amount": 6500,
     "vatAmount": 564,
-    "timestamp": 1747562548942,
+    "timestamp": "2025-05-18T10:02:28.942+0000",
     "created": "2025-05-18T10:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6586,7 +6586,7 @@
     "country": "GB",
     "amount": 4200,
     "vatAmount": 369,
-    "timestamp": 1747562248942,
+    "timestamp": "2025-05-18T09:57:28.942+0000",
     "created": "2025-05-18T09:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6669,7 +6669,7 @@
     "country": "GB",
     "amount": 3400,
     "vatAmount": 192,
-    "timestamp": 1747561948942,
+    "timestamp": "2025-05-18T09:52:28.942+0000",
     "created": "2025-05-18T09:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6752,7 +6752,7 @@
     "country": "GB",
     "amount": 7800,
     "vatAmount": 867,
-    "timestamp": 1747561648942,
+    "timestamp": "2025-05-18T09:47:28.942+0000",
     "created": "2025-05-18T09:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6835,7 +6835,7 @@
     "country": "GB",
     "amount": 4300,
     "vatAmount": 374,
-    "timestamp": 1747561348942,
+    "timestamp": "2025-05-18T09:42:28.942+0000",
     "created": "2025-05-18T09:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -6940,7 +6940,7 @@
     "country": "GB",
     "amount": 3100,
     "vatAmount": 344,
-    "timestamp": 1747561048942,
+    "timestamp": "2025-05-18T09:37:28.942+0000",
     "created": "2025-05-18T09:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7023,7 +7023,7 @@
     "country": "GB",
     "amount": 3300,
     "vatAmount": 318,
-    "timestamp": 1747560748942,
+    "timestamp": "2025-05-18T09:32:28.942+0000",
     "created": "2025-05-18T09:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7106,7 +7106,7 @@
     "country": "GB",
     "amount": 8300,
     "vatAmount": 775,
-    "timestamp": 1747560448942,
+    "timestamp": "2025-05-18T09:27:28.942+0000",
     "created": "2025-05-18T09:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7211,7 +7211,7 @@
     "country": "GB",
     "amount": 7400,
     "vatAmount": 762,
-    "timestamp": 1747560148942,
+    "timestamp": "2025-05-18T09:22:28.942+0000",
     "created": "2025-05-18T09:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7316,7 +7316,7 @@
     "country": "GB",
     "amount": 1500,
     "vatAmount": 167,
-    "timestamp": 1747559848942,
+    "timestamp": "2025-05-18T09:17:28.942+0000",
     "created": "2025-05-18T09:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7377,7 +7377,7 @@
     "country": "GB",
     "amount": 3300,
     "vatAmount": 187,
-    "timestamp": 1747559548942,
+    "timestamp": "2025-05-18T09:12:28.942+0000",
     "created": "2025-05-18T09:12:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7438,7 +7438,7 @@
     "country": "GB",
     "amount": 4200,
     "vatAmount": 238,
-    "timestamp": 1747559248942,
+    "timestamp": "2025-05-18T09:07:28.942+0000",
     "created": "2025-05-18T09:07:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7521,7 +7521,7 @@
     "country": "GB",
     "amount": 3300,
     "vatAmount": 187,
-    "timestamp": 1747558948942,
+    "timestamp": "2025-05-18T09:02:28.942+0000",
     "created": "2025-05-18T09:02:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7582,7 +7582,7 @@
     "country": "GB",
     "amount": 2200,
     "vatAmount": 125,
-    "timestamp": 1747558648942,
+    "timestamp": "2025-05-18T08:57:28.942+0000",
     "created": "2025-05-18T08:57:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7643,7 +7643,7 @@
     "country": "GB",
     "amount": 4600,
     "vatAmount": 511,
-    "timestamp": 1747558348942,
+    "timestamp": "2025-05-18T08:52:28.942+0000",
     "created": "2025-05-18T08:52:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7726,7 +7726,7 @@
     "country": "GB",
     "amount": 7700,
     "vatAmount": 697,
-    "timestamp": 1747558048942,
+    "timestamp": "2025-05-18T08:47:28.942+0000",
     "created": "2025-05-18T08:47:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7831,7 +7831,7 @@
     "country": "GB",
     "amount": 3000,
     "vatAmount": 333,
-    "timestamp": 1747557748942,
+    "timestamp": "2025-05-18T08:42:28.942+0000",
     "created": "2025-05-18T08:42:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7892,7 +7892,7 @@
     "country": "GB",
     "amount": 4800,
     "vatAmount": 533,
-    "timestamp": 1747557448942,
+    "timestamp": "2025-05-18T08:37:28.942+0000",
     "created": "2025-05-18T08:37:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -7953,7 +7953,7 @@
     "country": "GB",
     "amount": 4100,
     "vatAmount": 297,
-    "timestamp": 1747557148942,
+    "timestamp": "2025-05-18T08:32:28.942+0000",
     "created": "2025-05-18T08:32:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -8058,7 +8058,7 @@
     "country": "GB",
     "amount": 3300,
     "vatAmount": 187,
-    "timestamp": 1747556848942,
+    "timestamp": "2025-05-18T08:27:28.942+0000",
     "created": "2025-05-18T08:27:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -8119,7 +8119,7 @@
     "country": "GB",
     "amount": 4400,
     "vatAmount": 336,
-    "timestamp": 1747556548942,
+    "timestamp": "2025-05-18T08:22:28.942+0000",
     "created": "2025-05-18T08:22:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,
@@ -8224,7 +8224,7 @@
     "country": "GB",
     "amount": 6700,
     "vatAmount": 597,
-    "timestamp": 1747556248942,
+    "timestamp": "2025-05-18T08:17:28.942+0000",
     "created": "2025-05-18T08:17:28.942318Z",
     "gpsCoordinates": {
       "longitude": 18.11516501942474,

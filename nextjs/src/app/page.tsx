@@ -2,6 +2,7 @@
 
 import ClientWrapper from "../components/client-wrapper";
 import PaymentSuccessful from "../components/display-cards/payment-successful";
+import { Purchase } from "../types";
 import ReloadComponent from "./reload-component";
 import React, { useState, useEffect } from "react";
 
@@ -38,7 +39,8 @@ export default function Home() {
         if (event.data === "pong") {
           console.log("Pong received, connection is alive");
         } else {
-          const parsedData = JSON.parse(event.data);
+          let parsedData = JSON.parse(event.data);
+          parsedData.timestamp = parsedData.created;
           setPurchases((prevPurchases: any) => [...prevPurchases, parsedData]);
           
           // Show the PaymentSuccessful component for 4 seconds
@@ -92,7 +94,6 @@ export default function Home() {
         }
 
         const data = await response.json();
-        console.log("From fetch, data.data[0]: ", data.data[0]);
         setPurchases(data.data);
       } catch (error) {
         console.error("Error fetching purchases:", error);

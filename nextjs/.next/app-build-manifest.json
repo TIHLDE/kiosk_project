@@ -21,6 +21,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
+    "/api/zettle/purchases/local/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/zettle/purchases/local/route.js"
+    ],
     "/testpage/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -30,11 +35,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/api/zettle-webhook/route.js"
-    ],
-    "/api/zettle/purchases/local/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/zettle/purchases/local/route.js"
     ]
   }
 }
